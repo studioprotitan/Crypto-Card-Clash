@@ -1,0 +1,12 @@
+# use your real key here (don’t post it)
+$env:GEMINI_API_KEY = "AIzaSyBpV5TDw6S794z2byD4j9zsVE-RmOWc5bU"
+$env:GOOGLE_GENAI_API_KEY = $env:GEMINI_API_KEY   # some libs look for this name
+
+Temporary(will close when PowerShell closes):
+$env:GOOGLE_GENAI_API_KEY = "AIzaSyBpV5TDw6S794z2byD4j9zsVE-RmOWc5bU"
+
+
+Permanent
+setx GOOGLE_GENAI_API_KEY "AIzaSyBpV5TDw6S794z2byD4j9zsVE-RmOWc5bU"
+
+

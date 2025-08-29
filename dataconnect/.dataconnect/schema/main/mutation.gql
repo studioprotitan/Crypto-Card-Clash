@@ -1,0 +1,776 @@
+extend type Mutation {
+  """
+  ✨ Insert a single `AetheriaCard` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  aetheriaCard_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: AetheriaCard_Data!
+  ): AetheriaCard_KeyOutput! @fdc_generated(from: "AetheriaCard", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Character` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  character_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Character_Data!
+  ): Character_KeyOutput! @fdc_generated(from: "Character", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Deck` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  deck_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Deck_Data!
+  ): Deck_KeyOutput! @fdc_generated(from: "Deck", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `DeckCard` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  deckCard_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: DeckCard_Data!
+  ): DeckCard_KeyOutput! @fdc_generated(from: "DeckCard", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `PlayerCard` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  playerCard_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: PlayerCard_Data!
+  ): PlayerCard_KeyOutput! @fdc_generated(from: "PlayerCard", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Transaction` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  transaction_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Transaction_Data!
+  ): Transaction_KeyOutput! @fdc_generated(from: "Transaction", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `User` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert `AetheriaCard` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  aetheriaCard_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [AetheriaCard_Data!]!
+  ): [AetheriaCard_KeyOutput!]! @fdc_generated(from: "AetheriaCard", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Character` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  character_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Character_Data!]!
+  ): [Character_KeyOutput!]! @fdc_generated(from: "Character", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Deck` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  deck_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Deck_Data!]!
+  ): [Deck_KeyOutput!]! @fdc_generated(from: "Deck", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `DeckCard` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  deckCard_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [DeckCard_Data!]!
+  ): [DeckCard_KeyOutput!]! @fdc_generated(from: "DeckCard", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `PlayerCard` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  playerCard_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [PlayerCard_Data!]!
+  ): [PlayerCard_KeyOutput!]! @fdc_generated(from: "PlayerCard", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Transaction` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  transaction_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Transaction_Data!]!
+  ): [Transaction_KeyOutput!]! @fdc_generated(from: "Transaction", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `User` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert or update a single `AetheriaCard` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `AetheriaCard`.
+  """
+  aetheriaCard_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: AetheriaCard_Data!
+  ): AetheriaCard_KeyOutput! @fdc_generated(from: "AetheriaCard", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Character` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Character`.
+  """
+  character_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Character_Data!
+  ): Character_KeyOutput! @fdc_generated(from: "Character", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Deck` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Deck`.
+  """
+  deck_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Deck_Data!
+  ): Deck_KeyOutput! @fdc_generated(from: "Deck", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `DeckCard` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `DeckCard`.
+  """
+  deckCard_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: DeckCard_Data!
+  ): DeckCard_KeyOutput! @fdc_generated(from: "DeckCard", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `PlayerCard` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `PlayerCard`.
+  """
+  playerCard_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: PlayerCard_Data!
+  ): PlayerCard_KeyOutput! @fdc_generated(from: "PlayerCard", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Transaction` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Transaction`.
+  """
+  transaction_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Transaction_Data!
+  ): Transaction_KeyOutput! @fdc_generated(from: "Transaction", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `User` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update `AetheriaCard` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `AetheriaCard`.
+  """
+  aetheriaCard_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [AetheriaCard_Data!]!
+  ): [AetheriaCard_KeyOutput!]! @fdc_generated(from: "AetheriaCard", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Character` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Character`.
+  """
+  character_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Character_Data!]!
+  ): [Character_KeyOutput!]! @fdc_generated(from: "Character", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Deck` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Deck`.
+  """
+  deck_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Deck_Data!]!
+  ): [Deck_KeyOutput!]! @fdc_generated(from: "Deck", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `DeckCard` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `DeckCard`.
+  """
+  deckCard_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [DeckCard_Data!]!
+  ): [DeckCard_KeyOutput!]! @fdc_generated(from: "DeckCard", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `PlayerCard` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `PlayerCard`.
+  """
+  playerCard_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [PlayerCard_Data!]!
+  ): [PlayerCard_KeyOutput!]! @fdc_generated(from: "PlayerCard", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Transaction` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Transaction`.
+  """
+  transaction_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Transaction_Data!]!
+  ): [Transaction_KeyOutput!]! @fdc_generated(from: "Transaction", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `User` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Update a single `AetheriaCard` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `AetheriaCard` or `null` if not found.
+  """
+  aetheriaCard_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: AetheriaCard_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: AetheriaCard_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: AetheriaCard_Data!
+  ): AetheriaCard_KeyOutput @fdc_generated(from: "AetheriaCard", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Character` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Character` or `null` if not found.
+  """
+  character_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Character_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Character_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Character_Data!
+  ): Character_KeyOutput @fdc_generated(from: "Character", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Deck` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Deck` or `null` if not found.
+  """
+  deck_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Deck_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Deck_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Deck_Data!
+  ): Deck_KeyOutput @fdc_generated(from: "Deck", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `DeckCard` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `DeckCard` or `null` if not found.
+  """
+  deckCard_update(
+    """
+    The key used to identify the object.
+    """
+    key: DeckCard_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: DeckCard_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: DeckCard_Data!
+  ): DeckCard_KeyOutput @fdc_generated(from: "DeckCard", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `PlayerCard` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `PlayerCard` or `null` if not found.
+  """
+  playerCard_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: PlayerCard_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: PlayerCard_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: PlayerCard_Data!
+  ): PlayerCard_KeyOutput @fdc_generated(from: "PlayerCard", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Transaction` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Transaction` or `null` if not found.
+  """
+  transaction_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Transaction_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Transaction_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Transaction_Data!
+  ): Transaction_KeyOutput @fdc_generated(from: "Transaction", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `User` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `User` or `null` if not found.
+  """
+  user_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: User_Data!
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update `AetheriaCard` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  aetheriaCard_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: AetheriaCard_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: AetheriaCard_Data!
+  ): Int! @fdc_generated(from: "AetheriaCard", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Character` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  character_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Character_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Character_Data!
+  ): Int! @fdc_generated(from: "Character", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Deck` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  deck_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Deck_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Deck_Data!
+  ): Int! @fdc_generated(from: "Deck", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `DeckCard` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  deckCard_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: DeckCard_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: DeckCard_Data!
+  ): Int! @fdc_generated(from: "DeckCard", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `PlayerCard` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  playerCard_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: PlayerCard_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: PlayerCard_Data!
+  ): Int! @fdc_generated(from: "PlayerCard", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Transaction` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  transaction_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Transaction_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Transaction_Data!
+  ): Int! @fdc_generated(from: "Transaction", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `User` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  user_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: User_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: User_Data!
+  ): Int! @fdc_generated(from: "User", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Delete a single `AetheriaCard` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  aetheriaCard_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: AetheriaCard_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: AetheriaCard_FirstRow
+  ): AetheriaCard_KeyOutput @fdc_generated(from: "AetheriaCard", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Character` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  character_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Character_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Character_FirstRow
+  ): Character_KeyOutput @fdc_generated(from: "Character", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Deck` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  deck_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Deck_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Deck_FirstRow
+  ): Deck_KeyOutput @fdc_generated(from: "Deck", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `DeckCard` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  deckCard_delete(
+    """
+    The key used to identify the object.
+    """
+    key: DeckCard_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: DeckCard_FirstRow
+  ): DeckCard_KeyOutput @fdc_generated(from: "DeckCard", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `PlayerCard` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  playerCard_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: PlayerCard_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: PlayerCard_FirstRow
+  ): PlayerCard_KeyOutput @fdc_generated(from: "PlayerCard", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Transaction` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  transaction_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Transaction_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Transaction_FirstRow
+  ): Transaction_KeyOutput @fdc_generated(from: "Transaction", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `User` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  user_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete `AetheriaCard` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  aetheriaCard_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: AetheriaCard_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Character` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  character_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Character_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Character", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Deck` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  deck_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Deck_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Deck", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `DeckCard` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  deckCard_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: DeckCard_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "DeckCard", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `PlayerCard` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  playerCard_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: PlayerCard_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Transaction` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  transaction_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Transaction_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `User` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  user_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: User_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "User", purpose: DELETE_MULTIPLE)
+}

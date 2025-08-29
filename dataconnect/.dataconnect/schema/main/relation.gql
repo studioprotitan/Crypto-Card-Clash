@@ -1,0 +1,1544 @@
+extend type AetheriaCard {
+  """
+  ✨ List `PlayerCard` objects in a one-to-many relationship (where `PlayerCard`.`aetheriaCard` is this object).
+  """
+  playerCards_on_aetheriaCard(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: PlayerCard_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [PlayerCard_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: PlayerCard_Having
+  ): [PlayerCard!]! @fdc_generated(from: "PlayerCard.aetheriaCard", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "AetheriaCard", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table.
+  """
+  _count: Int! @fdc_generated(from: "AetheriaCard", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `abilityText` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  abilityText_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.abilityText", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `baseAttack` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  baseAttack_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.baseAttack", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `baseDefense` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  baseDefense_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.baseDefense", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `cardName` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  cardName_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.cardName", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `createdAt` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  createdAt_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.createdAt", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `description` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  description_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.description", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `elementType` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  elementType_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.elementType", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `imageUrl` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  imageUrl_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.imageUrl", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `isTradable` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  isTradable_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.isTradable", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `maxLevel` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  maxLevel_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.maxLevel", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `AetheriaCard` table where the `rarity` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  rarity_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "AetheriaCard.rarity", purpose: QUERY_COUNT)
+  """
+  ✨ Sum the `baseAttack` field in the `AetheriaCard` table.
+  """
+  baseAttack_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "AetheriaCard.baseAttack", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `baseDefense` field in the `AetheriaCard` table.
+  """
+  baseDefense_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "AetheriaCard.baseDefense", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `maxLevel` field in the `AetheriaCard` table.
+  """
+  maxLevel_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "AetheriaCard.maxLevel", purpose: QUERY_SUM)
+  """
+  ✨ Average the `baseAttack` field in the `AetheriaCard` table.
+  """
+  baseAttack_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "AetheriaCard.baseAttack", purpose: QUERY_AVG)
+  """
+  ✨ Average the `baseDefense` field in the `AetheriaCard` table.
+  """
+  baseDefense_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "AetheriaCard.baseDefense", purpose: QUERY_AVG)
+  """
+  ✨ Average the `maxLevel` field in the `AetheriaCard` table.
+  """
+  maxLevel_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "AetheriaCard.maxLevel", purpose: QUERY_AVG)
+  """
+  ✨ Minimum of the `baseAttack` field in the `AetheriaCard` table.
+  """
+  baseAttack_min: Int @fdc_generated(from: "AetheriaCard.baseAttack", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `baseDefense` field in the `AetheriaCard` table.
+  """
+  baseDefense_min: Int @fdc_generated(from: "AetheriaCard.baseDefense", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `createdAt` field in the `AetheriaCard` table.
+  """
+  createdAt_min: Timestamp @fdc_generated(from: "AetheriaCard.createdAt", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `maxLevel` field in the `AetheriaCard` table.
+  """
+  maxLevel_min: Int @fdc_generated(from: "AetheriaCard.maxLevel", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `baseAttack` field in the `AetheriaCard` table.
+  """
+  baseAttack_max: Int @fdc_generated(from: "AetheriaCard.baseAttack", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `baseDefense` field in the `AetheriaCard` table.
+  """
+  baseDefense_max: Int @fdc_generated(from: "AetheriaCard.baseDefense", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `createdAt` field in the `AetheriaCard` table.
+  """
+  createdAt_max: Timestamp @fdc_generated(from: "AetheriaCard.createdAt", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `maxLevel` field in the `AetheriaCard` table.
+  """
+  maxLevel_max: Int @fdc_generated(from: "AetheriaCard.maxLevel", purpose: QUERY_MAX)
+}
+extend type Character {
+  """
+  ✨ List `Deck` objects in a one-to-many relationship (where `Deck`.`character` is this object).
+  """
+  decks_on_character(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Deck_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Deck_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Deck_Having
+  ): [Deck!]! @fdc_generated(from: "Deck.character", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "Character", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `Character` table.
+  """
+  _count: Int! @fdc_generated(from: "Character", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `agility` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  agility_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.agility", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `characterClass` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  characterClass_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.characterClass", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `characterName` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  characterName_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.characterName", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `createdAt` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  createdAt_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.createdAt", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `equippedDeckId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  equippedDeckId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.equippedDeckId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `experience` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  experience_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.experience", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `health` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  health_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.health", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `intelligence` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  intelligence_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.intelligence", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `level` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  level_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.level", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `mana` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  mana_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.mana", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `strength` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  strength_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.strength", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Character` table where the `userId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  userId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Character.userId", purpose: QUERY_COUNT)
+  """
+  ✨ Sum the `agility` field in the `Character` table.
+  """
+  agility_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Character.agility", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `experience` field in the `Character` table.
+  """
+  experience_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Character.experience", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `health` field in the `Character` table.
+  """
+  health_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Character.health", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `intelligence` field in the `Character` table.
+  """
+  intelligence_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Character.intelligence", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `level` field in the `Character` table.
+  """
+  level_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Character.level", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `mana` field in the `Character` table.
+  """
+  mana_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Character.mana", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `strength` field in the `Character` table.
+  """
+  strength_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Character.strength", purpose: QUERY_SUM)
+  """
+  ✨ Average the `agility` field in the `Character` table.
+  """
+  agility_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Character.agility", purpose: QUERY_AVG)
+  """
+  ✨ Average the `experience` field in the `Character` table.
+  """
+  experience_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Character.experience", purpose: QUERY_AVG)
+  """
+  ✨ Average the `health` field in the `Character` table.
+  """
+  health_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Character.health", purpose: QUERY_AVG)
+  """
+  ✨ Average the `intelligence` field in the `Character` table.
+  """
+  intelligence_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Character.intelligence", purpose: QUERY_AVG)
+  """
+  ✨ Average the `level` field in the `Character` table.
+  """
+  level_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Character.level", purpose: QUERY_AVG)
+  """
+  ✨ Average the `mana` field in the `Character` table.
+  """
+  mana_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Character.mana", purpose: QUERY_AVG)
+  """
+  ✨ Average the `strength` field in the `Character` table.
+  """
+  strength_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Character.strength", purpose: QUERY_AVG)
+  """
+  ✨ Minimum of the `agility` field in the `Character` table.
+  """
+  agility_min: Int @fdc_generated(from: "Character.agility", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `createdAt` field in the `Character` table.
+  """
+  createdAt_min: Timestamp @fdc_generated(from: "Character.createdAt", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `experience` field in the `Character` table.
+  """
+  experience_min: Int @fdc_generated(from: "Character.experience", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `health` field in the `Character` table.
+  """
+  health_min: Int @fdc_generated(from: "Character.health", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `intelligence` field in the `Character` table.
+  """
+  intelligence_min: Int @fdc_generated(from: "Character.intelligence", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `level` field in the `Character` table.
+  """
+  level_min: Int @fdc_generated(from: "Character.level", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `mana` field in the `Character` table.
+  """
+  mana_min: Int @fdc_generated(from: "Character.mana", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `strength` field in the `Character` table.
+  """
+  strength_min: Int @fdc_generated(from: "Character.strength", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `agility` field in the `Character` table.
+  """
+  agility_max: Int @fdc_generated(from: "Character.agility", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `createdAt` field in the `Character` table.
+  """
+  createdAt_max: Timestamp @fdc_generated(from: "Character.createdAt", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `experience` field in the `Character` table.
+  """
+  experience_max: Int @fdc_generated(from: "Character.experience", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `health` field in the `Character` table.
+  """
+  health_max: Int @fdc_generated(from: "Character.health", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `intelligence` field in the `Character` table.
+  """
+  intelligence_max: Int @fdc_generated(from: "Character.intelligence", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `level` field in the `Character` table.
+  """
+  level_max: Int @fdc_generated(from: "Character.level", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `mana` field in the `Character` table.
+  """
+  mana_max: Int @fdc_generated(from: "Character.mana", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `strength` field in the `Character` table.
+  """
+  strength_max: Int @fdc_generated(from: "Character.strength", purpose: QUERY_MAX)
+}
+extend type Deck {
+  """
+  ✨ List `Character` objects in a one-to-many relationship (where `Character`.`equippedDeck` is this object).
+  """
+  characters_on_equippedDeck(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Character_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Character_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Character_Having
+  ): [Character!]! @fdc_generated(from: "Character.equippedDeck", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  ✨ List `DeckCard` objects in a one-to-many relationship (where `DeckCard`.`deck` is this object).
+  """
+  deckCards_on_deck(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: DeckCard_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [DeckCard_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: DeckCard_Having
+  ): [DeckCard!]! @fdc_generated(from: "DeckCard.deck", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  ✨ List `PlayerCard` objects using `DeckCard` as the join table (a `DeckCard` object exists where its `deck` is this and its `playerCard` is that).
+  """
+  playerCards_via_DeckCard(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: DeckCard_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [DeckCard_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: DeckCard_Having
+  ): [PlayerCard!]! @fdc_generated(from: "DeckCard", purpose: QUERY_MULTIPLE_MANY_TO_MANY)
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "Deck", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `Deck` table.
+  """
+  _count: Int! @fdc_generated(from: "Deck", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Deck` table where the `characterId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  characterId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Deck.characterId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Deck` table where the `createdAt` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  createdAt_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Deck.createdAt", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Deck` table where the `deckName` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  deckName_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Deck.deckName", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Deck` table where the `description` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  description_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Deck.description", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Deck` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Deck.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Deck` table where the `isActive` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  isActive_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Deck.isActive", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Deck` table where the `userId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  userId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Deck.userId", purpose: QUERY_COUNT)
+  """
+  ✨ Minimum of the `createdAt` field in the `Deck` table.
+  """
+  createdAt_min: Timestamp @fdc_generated(from: "Deck.createdAt", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `createdAt` field in the `Deck` table.
+  """
+  createdAt_max: Timestamp @fdc_generated(from: "Deck.createdAt", purpose: QUERY_MAX)
+}
+extend type DeckCard {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "DeckCard", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `DeckCard` table.
+  """
+  _count: Int! @fdc_generated(from: "DeckCard", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeckCard` table where the `deckId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  deckId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeckCard.deckId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeckCard` table where the `isMainDeckCard` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  isMainDeckCard_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeckCard.isMainDeckCard", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeckCard` table where the `playerCardId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  playerCardId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeckCard.playerCardId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeckCard` table where the `positionInDeck` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  positionInDeck_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeckCard.positionInDeck", purpose: QUERY_COUNT)
+  """
+  ✨ Sum the `positionInDeck` field in the `DeckCard` table.
+  """
+  positionInDeck_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "DeckCard.positionInDeck", purpose: QUERY_SUM)
+  """
+  ✨ Average the `positionInDeck` field in the `DeckCard` table.
+  """
+  positionInDeck_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "DeckCard.positionInDeck", purpose: QUERY_AVG)
+  """
+  ✨ Minimum of the `positionInDeck` field in the `DeckCard` table.
+  """
+  positionInDeck_min: Int @fdc_generated(from: "DeckCard.positionInDeck", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `positionInDeck` field in the `DeckCard` table.
+  """
+  positionInDeck_max: Int @fdc_generated(from: "DeckCard.positionInDeck", purpose: QUERY_MAX)
+}
+extend type PlayerCard {
+  """
+  ✨ List `DeckCard` objects in a one-to-many relationship (where `DeckCard`.`playerCard` is this object).
+  """
+  deckCards_on_playerCard(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: DeckCard_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [DeckCard_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: DeckCard_Having
+  ): [DeckCard!]! @fdc_generated(from: "DeckCard.playerCard", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  ✨ List `Deck` objects using `DeckCard` as the join table (a `DeckCard` object exists where its `playerCard` is this and its `deck` is that).
+  """
+  decks_via_DeckCard(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: DeckCard_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [DeckCard_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: DeckCard_Having
+  ): [Deck!]! @fdc_generated(from: "DeckCard", purpose: QUERY_MULTIPLE_MANY_TO_MANY)
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "PlayerCard", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table.
+  """
+  _count: Int! @fdc_generated(from: "PlayerCard", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `aetheriaCardId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  aetheriaCardId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.aetheriaCardId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `cardInstanceId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  cardInstanceId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.cardInstanceId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `createdAt` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  createdAt_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.createdAt", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `currentAttack` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  currentAttack_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.currentAttack", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `currentDefense` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  currentDefense_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.currentDefense", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `equippedSlot` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  equippedSlot_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.equippedSlot", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `experience` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  experience_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.experience", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `isEquipped` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  isEquipped_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.isEquipped", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `level` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  level_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.level", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PlayerCard` table where the `ownerId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  ownerId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PlayerCard.ownerId", purpose: QUERY_COUNT)
+  """
+  ✨ Sum the `currentAttack` field in the `PlayerCard` table.
+  """
+  currentAttack_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "PlayerCard.currentAttack", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `currentDefense` field in the `PlayerCard` table.
+  """
+  currentDefense_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "PlayerCard.currentDefense", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `experience` field in the `PlayerCard` table.
+  """
+  experience_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "PlayerCard.experience", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `level` field in the `PlayerCard` table.
+  """
+  level_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "PlayerCard.level", purpose: QUERY_SUM)
+  """
+  ✨ Average the `currentAttack` field in the `PlayerCard` table.
+  """
+  currentAttack_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "PlayerCard.currentAttack", purpose: QUERY_AVG)
+  """
+  ✨ Average the `currentDefense` field in the `PlayerCard` table.
+  """
+  currentDefense_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "PlayerCard.currentDefense", purpose: QUERY_AVG)
+  """
+  ✨ Average the `experience` field in the `PlayerCard` table.
+  """
+  experience_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "PlayerCard.experience", purpose: QUERY_AVG)
+  """
+  ✨ Average the `level` field in the `PlayerCard` table.
+  """
+  level_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "PlayerCard.level", purpose: QUERY_AVG)
+  """
+  ✨ Minimum of the `createdAt` field in the `PlayerCard` table.
+  """
+  createdAt_min: Timestamp @fdc_generated(from: "PlayerCard.createdAt", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `currentAttack` field in the `PlayerCard` table.
+  """
+  currentAttack_min: Int @fdc_generated(from: "PlayerCard.currentAttack", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `currentDefense` field in the `PlayerCard` table.
+  """
+  currentDefense_min: Int @fdc_generated(from: "PlayerCard.currentDefense", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `experience` field in the `PlayerCard` table.
+  """
+  experience_min: Int @fdc_generated(from: "PlayerCard.experience", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `level` field in the `PlayerCard` table.
+  """
+  level_min: Int @fdc_generated(from: "PlayerCard.level", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `createdAt` field in the `PlayerCard` table.
+  """
+  createdAt_max: Timestamp @fdc_generated(from: "PlayerCard.createdAt", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `currentAttack` field in the `PlayerCard` table.
+  """
+  currentAttack_max: Int @fdc_generated(from: "PlayerCard.currentAttack", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `currentDefense` field in the `PlayerCard` table.
+  """
+  currentDefense_max: Int @fdc_generated(from: "PlayerCard.currentDefense", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `experience` field in the `PlayerCard` table.
+  """
+  experience_max: Int @fdc_generated(from: "PlayerCard.experience", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `level` field in the `PlayerCard` table.
+  """
+  level_max: Int @fdc_generated(from: "PlayerCard.level", purpose: QUERY_MAX)
+}
+extend type Transaction {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "Transaction", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `Transaction` table.
+  """
+  _count: Int! @fdc_generated(from: "Transaction", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `amount` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  amount_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.amount", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `assetId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  assetId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.assetId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `assetType` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  assetType_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.assetType", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `createdAt` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  createdAt_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.createdAt", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `currency` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  currency_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.currency", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `initiatorUserId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  initiatorUserId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.initiatorUserId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `marketplaceListingId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  marketplaceListingId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.marketplaceListingId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `status` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  status_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.status", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `targetUserId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  targetUserId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.targetUserId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `transactionHash` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  transactionHash_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.transactionHash", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Transaction` table where the `transactionType` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  transactionType_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Transaction.transactionType", purpose: QUERY_COUNT)
+  """
+  ✨ Sum the `amount` field in the `Transaction` table.
+  """
+  amount_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Transaction.amount", purpose: QUERY_SUM)
+  """
+  ✨ Average the `amount` field in the `Transaction` table.
+  """
+  amount_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Transaction.amount", purpose: QUERY_AVG)
+  """
+  ✨ Minimum of the `amount` field in the `Transaction` table.
+  """
+  amount_min: Float @fdc_generated(from: "Transaction.amount", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `createdAt` field in the `Transaction` table.
+  """
+  createdAt_min: Timestamp @fdc_generated(from: "Transaction.createdAt", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `amount` field in the `Transaction` table.
+  """
+  amount_max: Float @fdc_generated(from: "Transaction.amount", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `createdAt` field in the `Transaction` table.
+  """
+  createdAt_max: Timestamp @fdc_generated(from: "Transaction.createdAt", purpose: QUERY_MAX)
+}
+extend type User {
+  """
+  ✨ List `Character` objects in a one-to-many relationship (where `Character`.`user` is this object).
+  """
+  characters_on_user(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Character_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Character_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Character_Having
+  ): [Character!]! @fdc_generated(from: "Character.user", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  ✨ List `Deck` objects in a one-to-many relationship (where `Deck`.`user` is this object).
+  """
+  decks_on_user(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Deck_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Deck_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Deck_Having
+  ): [Deck!]! @fdc_generated(from: "Deck.user", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  ✨ List `PlayerCard` objects in a one-to-many relationship (where `PlayerCard`.`owner` is this object).
+  """
+  playerCards_on_owner(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: PlayerCard_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [PlayerCard_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: PlayerCard_Having
+  ): [PlayerCard!]! @fdc_generated(from: "PlayerCard.owner", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  ✨ List `Transaction` objects in a one-to-many relationship (where `Transaction`.`initiatorUser` is this object).
+  """
+  transactions_on_initiatorUser(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Transaction_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Transaction_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Transaction_Having
+  ): [Transaction!]! @fdc_generated(from: "Transaction.initiatorUser", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  ✨ List `Transaction` objects in a one-to-many relationship (where `Transaction`.`targetUser` is this object).
+  """
+  transactions_on_targetUser(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Transaction_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Transaction_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Transaction_Having
+  ): [Transaction!]! @fdc_generated(from: "Transaction.targetUser", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "User", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `User` table.
+  """
+  _count: Int! @fdc_generated(from: "User", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `createdAt` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  createdAt_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.createdAt", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `email` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  email_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.email", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `lastLoginAt` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  lastLoginAt_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.lastLoginAt", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `profilePictureUrl` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  profilePictureUrl_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.profilePictureUrl", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `username` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  username_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.username", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `walletAddress` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  walletAddress_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.walletAddress", purpose: QUERY_COUNT)
+  """
+  ✨ Minimum of the `createdAt` field in the `User` table.
+  """
+  createdAt_min: Timestamp @fdc_generated(from: "User.createdAt", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `lastLoginAt` field in the `User` table.
+  """
+  lastLoginAt_min: Timestamp @fdc_generated(from: "User.lastLoginAt", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `createdAt` field in the `User` table.
+  """
+  createdAt_max: Timestamp @fdc_generated(from: "User.createdAt", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `lastLoginAt` field in the `User` table.
+  """
+  lastLoginAt_max: Timestamp @fdc_generated(from: "User.lastLoginAt", purpose: QUERY_MAX)
+}

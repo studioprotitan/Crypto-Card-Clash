@@ -1,0 +1,6 @@
+query Sanity_UserByWallet($address: String!) {
+  users(where: { walletAddress: { eq: $address } }) {
+    id
+    walletNonce
+  }
+}

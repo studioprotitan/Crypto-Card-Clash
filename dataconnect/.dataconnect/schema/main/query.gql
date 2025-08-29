@@ -1,0 +1,368 @@
+extend type Query {
+  """
+  ✨ Look up a single `AetheriaCard` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  aetheriaCard(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: AetheriaCard_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: AetheriaCard_FirstRow
+  ): AetheriaCard @fdc_generated(from: "AetheriaCard", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Character` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  character(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Character_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Character_FirstRow
+  ): Character @fdc_generated(from: "Character", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Deck` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  deck(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Deck_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Deck_FirstRow
+  ): Deck @fdc_generated(from: "Deck", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `DeckCard` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  deckCard(
+    """
+    The key used to identify the object.
+    """
+    key: DeckCard_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: DeckCard_FirstRow
+  ): DeckCard @fdc_generated(from: "DeckCard", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `PlayerCard` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  playerCard(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: PlayerCard_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: PlayerCard_FirstRow
+  ): PlayerCard @fdc_generated(from: "PlayerCard", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Transaction` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  transaction(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Transaction_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Transaction_FirstRow
+  ): Transaction @fdc_generated(from: "Transaction", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `User` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  user(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User @fdc_generated(from: "User", purpose: QUERY_SINGLE)
+  """
+  ✨ List `AetheriaCard` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  aetheriaCards(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: AetheriaCard_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [AetheriaCard_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: AetheriaCard_Having
+  ): [AetheriaCard!]! @fdc_generated(from: "AetheriaCard", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Character` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  characters(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Character_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Character_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Character_Having
+  ): [Character!]! @fdc_generated(from: "Character", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Deck` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  decks(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Deck_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Deck_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Deck_Having
+  ): [Deck!]! @fdc_generated(from: "Deck", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `DeckCard` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  deckCards(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: DeckCard_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [DeckCard_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: DeckCard_Having
+  ): [DeckCard!]! @fdc_generated(from: "DeckCard", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `PlayerCard` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  playerCards(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: PlayerCard_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [PlayerCard_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: PlayerCard_Having
+  ): [PlayerCard!]! @fdc_generated(from: "PlayerCard", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Transaction` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  transactions(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Transaction_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Transaction_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Transaction_Having
+  ): [Transaction!]! @fdc_generated(from: "Transaction", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `User` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  users(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: User_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [User_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: User_Having
+  ): [User!]! @fdc_generated(from: "User", purpose: QUERY_MULTIPLE)
+}

@@ -1,0 +1,8 @@
+query Sanity_DeckForCheckout($code: String!) {
+  decks(id: { eq: $code }) {
+    id
+    name
+    priceUSD
+    stripeProductId
+  }
+}

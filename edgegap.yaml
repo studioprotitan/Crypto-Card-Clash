@@ -1,0 +1,15 @@
+name: webhook-service
+version: "1.0.0"
+
+services:
+  api:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - 3000:3000
+    env:
+      - NODE_ENV=production
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}

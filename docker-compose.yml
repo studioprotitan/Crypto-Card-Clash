@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    image: crypto-card-clash
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.txt
+    environment:
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}

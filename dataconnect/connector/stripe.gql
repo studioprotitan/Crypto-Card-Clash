@@ -1,0 +1,12 @@
+type StripePayment @table(key: "id") {
+  id: ID!
+  playerId: String!
+  amount: Int!
+  currency: String!
+  status: String!
+  createdAt: Timestamp!
+}
+
+type Mutation {
+  createStripePayment(playerId: String!, amount: Int!, currency: String!): StripePayment!
+}

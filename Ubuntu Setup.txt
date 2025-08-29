@@ -1,0 +1,197 @@
+Ubuntu Setup:
+
+Awesome—let’s get you fully set up on **Ubuntu** side-by-side with your Windows tools so Docker + Firebase + Genkit play nicely. We’ll use **WSL2 (Windows Subsystem for Linux)** because it’s the smoothest path with Docker Desktop.
+
+---
+
+# 1) Enable WSL2 + Install Ubuntu
+
+### In **PowerShell (Admin)**:
+
+```powershell
+wsl --install -d Ubuntu
+```
+
+* If you see errors about features, run:
+
+```powershell
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+wsl --set-default-version 2
+```
+
+Reboot if prompted, then re-run `wsl --install -d Ubuntu`.
+
+### Create your Ubuntu user when prompted.
+
+Open Ubuntu from Start Menu once installation finishes.
+
+---
+
+# 2) VS Code integration (Remote - WSL)
+
+1. Open **VS Code**.
+2. Install extension **“Remote Development”** (or “WSL”).
+3. Click the green `><` status icon → “**Connect to WSL**”.
+4. In VS Code (WSL), open your Windows project path:
+
+   ```
+   /mnt/c/Developer/Restore_config_only
+   ```
+
+   That’s your repo root inside Ubuntu.
+
+---
+
+# 3) Node.js (LTS) on Ubuntu (using nvm)
+
+In the **Ubuntu** terminal:
+
+```bash
+# update basics
+sudo apt update && sudo apt -y upgrade
+
+# install build tools
+sudo apt -y install build-essential curl git
+
+# install nvm
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+# load nvm in current shell
+export NVM_DIR="$HOME/.nvm"; . "$NVM_DIR/nvm.sh"
+
+# install Node LTS (includes npm)
+nvm install --lts
+nvm use --lts
+
+# verify
+node -v
+npm -v
+```
+
+---
+
+# 4) Docker Desktop + WSL integration
+
+You already have Docker Desktop installed. Hook it into WSL:
+
+* Open **Docker Desktop** → **Settings** → **Resources** → **WSL Integration**
+* Toggle **“Enable integration with my default WSL distro”** (and ensure **Ubuntu** is on)
+* Apply & Restart Docker Desktop.
+
+### Test from Ubuntu:
+
+```bash
+docker --version
+docker run hello-world
+```
+
+(If `permission denied`, run `sudo usermod -aG docker $USER && newgrp docker` then try again.)
+
+> If you don’t want Docker Desktop, we can install **Docker Engine** directly in Ubuntu instead. But Docker Desktop + WSL is simpler on Windows.
+
+---
+
+# 5) Firebase CLI + Genkit CLI (Ubuntu)
+
+```bash
+# Firebase CLI (via npm)
+npm install -g firebase-tools
+
+# Log in (opens browser in Windows; it still works)
+firebase login
+
+# Genkit CLI
+npm install -g @genkit-ai/cli
+genkit --version
+```
+
+---
+
+# 6) Google Cloud SDK (optional but useful)
+
+If you’ll use `gcloud` commands:
+
+```bash
+# Add Google’s apt repo
+sudo apt-get install -y apt-transport-https ca-certificates gnupg
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | \
+  sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | \
+  sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
+sudo apt update && sudo apt install -y google-cloud-sdk
+
+# Auth (optional)
+gcloud auth login
+gcloud config set project crypto-card-clash
+```
+
+---
+
+# 7) Pull your project and install deps (in Ubuntu)
+
+In Ubuntu terminal (WSL):
+
+```bash
+cd /mnt/c/Developer/Restore_config_only
+
+# if you also grabbed src zip, extract it here first
+# then install deps:
+npm install
+
+# Firebase Data Connect init (if needed)
+firebase init
+
+# Genkit SDKs
+genkit generate
+
+# Run Genkit locally
+genkit start src/index.ts
+```
+
+### Docker run (from Ubuntu or Windows terminal):
+
+```bash
+docker compose up --build
+```
+
+---
+
+# 8) Quality-of-life setup
+
+* **Git config**:
+
+  ```bash
+  git config --global user.name "Your Name"
+  git config --global user.email "you@example.com"
+  ```
+* **SSH key** (if you push to GitHub/GitLab):
+
+  ```bash
+  ssh-keygen -t ed25519 -C "you@example.com"
+  cat ~/.ssh/id_ed25519.pub
+  ```
+
+  Add that key to your repo host.
+
+---
+
+# 9) Sanity checks
+
+* **Node & npm** work in **both** Windows and Ubuntu.
+* **Docker Desktop** shows **Ubuntu** under WSL integration.
+* `docker run hello-world` prints the success message.
+* `firebase login` succeeded.
+* `genkit --version` prints a version.
+* In your project root, `genkit generate` succeeds (you may need at least one valid connector query, which we included).
+
+---
+
+# 10) If something blocks you
+
+Tell me **exactly** which step fails and any error text. Worst case, we can:
+
+* generate per-step zips (even smaller than src/config split),
+* pin Node versions,
+* or switch to Docker-only workflows to bypass local toolchain quirks.
+
+Want me to queue a **tiny zip** that only includes `src/connectors`, then another for `src/ai/flows` so you can layer them gradually?

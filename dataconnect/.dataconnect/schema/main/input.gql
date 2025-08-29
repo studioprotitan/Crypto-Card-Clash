@@ -1,0 +1,3211 @@
+"""
+✨ `AetheriaCard_KeyOutput` returns the primary key fields of table type `AetheriaCard`.
+
+It has the same format as `AetheriaCard_Key`, but is only used as mutation return value.
+"""
+scalar AetheriaCard_KeyOutput
+"""
+✨ `Character_KeyOutput` returns the primary key fields of table type `Character`.
+
+It has the same format as `Character_Key`, but is only used as mutation return value.
+"""
+scalar Character_KeyOutput
+"""
+✨ `Deck_KeyOutput` returns the primary key fields of table type `Deck`.
+
+It has the same format as `Deck_Key`, but is only used as mutation return value.
+"""
+scalar Deck_KeyOutput
+"""
+✨ `DeckCard_KeyOutput` returns the primary key fields of table type `DeckCard`.
+
+It has the same format as `DeckCard_Key`, but is only used as mutation return value.
+"""
+scalar DeckCard_KeyOutput
+"""
+✨ `PlayerCard_KeyOutput` returns the primary key fields of table type `PlayerCard`.
+
+It has the same format as `PlayerCard_Key`, but is only used as mutation return value.
+"""
+scalar PlayerCard_KeyOutput
+"""
+✨ `Transaction_KeyOutput` returns the primary key fields of table type `Transaction`.
+
+It has the same format as `Transaction_Key`, but is only used as mutation return value.
+"""
+scalar Transaction_KeyOutput
+"""
+✨ `User_KeyOutput` returns the primary key fields of table type `User`.
+
+It has the same format as `User_Key`, but is only used as mutation return value.
+"""
+scalar User_KeyOutput
+"""
+✨ Generated data input type for table 'AetheriaCard'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input AetheriaCard_Data {
+  """
+  ✨ Generated from Field `AetheriaCard`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `AetheriaCard`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `AetheriaCard`.`abilityText` of type `String`
+  """
+  abilityText: String
+  """
+  ✨ `_expr` server value variant of `abilityText` (✨ Generated from Field `AetheriaCard`.`abilityText` of type `String`)
+  """
+  abilityText_expr: String_Expr
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack` of type `Int!`
+  """
+  baseAttack: Int
+  """
+  ✨ `_expr` server value variant of `baseAttack` (✨ Generated from Field `AetheriaCard`.`baseAttack` of type `Int!`)
+  """
+  baseAttack_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `baseAttack` (✨ Generated from Field `AetheriaCard`.`baseAttack` of type `Int!`)
+  """
+  baseAttack_update: [Int_Update!]
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense` of type `Int!`
+  """
+  baseDefense: Int
+  """
+  ✨ `_expr` server value variant of `baseDefense` (✨ Generated from Field `AetheriaCard`.`baseDefense` of type `Int!`)
+  """
+  baseDefense_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `baseDefense` (✨ Generated from Field `AetheriaCard`.`baseDefense` of type `Int!`)
+  """
+  baseDefense_update: [Int_Update!]
+  """
+  ✨ Generated from Field `AetheriaCard`.`cardName` of type `String!`
+  """
+  cardName: String
+  """
+  ✨ `_expr` server value variant of `cardName` (✨ Generated from Field `AetheriaCard`.`cardName` of type `String!`)
+  """
+  cardName_expr: String_Expr
+  """
+  ✨ Generated from Field `AetheriaCard`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `AetheriaCard`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `AetheriaCard`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `AetheriaCard`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `AetheriaCard`.`description` of type `String`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `AetheriaCard`.`description` of type `String`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `AetheriaCard`.`elementType` of type `String!`
+  """
+  elementType: String
+  """
+  ✨ `_expr` server value variant of `elementType` (✨ Generated from Field `AetheriaCard`.`elementType` of type `String!`)
+  """
+  elementType_expr: String_Expr
+  """
+  ✨ Generated from Field `AetheriaCard`.`imageUrl` of type `String`
+  """
+  imageUrl: String
+  """
+  ✨ `_expr` server value variant of `imageUrl` (✨ Generated from Field `AetheriaCard`.`imageUrl` of type `String`)
+  """
+  imageUrl_expr: String_Expr
+  """
+  ✨ Generated from Field `AetheriaCard`.`isTradable` of type `Boolean`
+  """
+  isTradable: Boolean
+  """
+  ✨ `_expr` server value variant of `isTradable` (✨ Generated from Field `AetheriaCard`.`isTradable` of type `Boolean`)
+  """
+  isTradable_expr: Boolean_Expr
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel` of type `Int`
+  """
+  maxLevel: Int
+  """
+  ✨ `_expr` server value variant of `maxLevel` (✨ Generated from Field `AetheriaCard`.`maxLevel` of type `Int`)
+  """
+  maxLevel_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `maxLevel` (✨ Generated from Field `AetheriaCard`.`maxLevel` of type `Int`)
+  """
+  maxLevel_update: [Int_Update!]
+  """
+  ✨ Generated from Field `AetheriaCard`.`rarity` of type `String!`
+  """
+  rarity: String
+  """
+  ✨ `_expr` server value variant of `rarity` (✨ Generated from Field `AetheriaCard`.`rarity` of type `String!`)
+  """
+  rarity_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'AetheriaCard'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input AetheriaCard_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [AetheriaCard_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: AetheriaCard_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [AetheriaCard_Filter!]
+  """
+  ✨ Generated from Field `AetheriaCard`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`abilityText` of type `String`
+  """
+  abilityText: String_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack` of type `Int!`
+  """
+  baseAttack: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense` of type `Int!`
+  """
+  baseDefense: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`cardName` of type `String!`
+  """
+  cardName: String_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`description` of type `String`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`elementType` of type `String!`
+  """
+  elementType: String_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`imageUrl` of type `String`
+  """
+  imageUrl: String_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`isTradable` of type `Boolean`
+  """
+  isTradable: Boolean_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel` of type `Int`
+  """
+  maxLevel: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`rarity` of type `String!`
+  """
+  rarity: String_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`playerCards_on_aetheriaCard` of type `[PlayerCard!]!`
+  """
+  playerCards_on_aetheriaCard: PlayerCard_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'AetheriaCard'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input AetheriaCard_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [AetheriaCard_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: AetheriaCard_Filter
+}
+"""
+✨ Generated having input type for table 'AetheriaCard'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input AetheriaCard_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [AetheriaCard_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: AetheriaCard_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [AetheriaCard_Having!]
+  """
+  ✨ Generated from Field `AetheriaCard`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`abilityText_count` of type `Int!`
+  """
+  abilityText_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_count` of type `Int!`
+  """
+  baseAttack_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_count` of type `Int!`
+  """
+  baseDefense_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`cardName_count` of type `Int!`
+  """
+  cardName_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`elementType_count` of type `Int!`
+  """
+  elementType_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`imageUrl_count` of type `Int!`
+  """
+  imageUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`isTradable_count` of type `Int!`
+  """
+  isTradable_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_count` of type `Int!`
+  """
+  maxLevel_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`rarity_count` of type `Int!`
+  """
+  rarity_count: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_sum` of type `Int`
+  """
+  baseAttack_sum: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_sum` of type `Int`
+  """
+  baseDefense_sum: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_sum` of type `Int`
+  """
+  maxLevel_sum: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_avg` of type `Float`
+  """
+  baseAttack_avg: Float_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_avg` of type `Float`
+  """
+  baseDefense_avg: Float_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_avg` of type `Float`
+  """
+  maxLevel_avg: Float_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_min` of type `Int`
+  """
+  baseAttack_min: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_min` of type `Int`
+  """
+  baseDefense_min: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_min` of type `Int`
+  """
+  maxLevel_min: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_max` of type `Int`
+  """
+  baseAttack_max: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_max` of type `Int`
+  """
+  baseDefense_max: Int_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_max` of type `Int`
+  """
+  maxLevel_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'AetheriaCard'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input AetheriaCard_Key {
+  """
+  ✨ Generated from Field `AetheriaCard`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `AetheriaCard`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'AetheriaCard'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input AetheriaCard_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: AetheriaCard_Filter
+}
+"""
+✨ Generated order input type for table 'AetheriaCard'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input AetheriaCard_Order {
+  """
+  ✨ Generated from Field `AetheriaCard`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`abilityText` of type `String`
+  """
+  abilityText: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack` of type `Int!`
+  """
+  baseAttack: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense` of type `Int!`
+  """
+  baseDefense: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`cardName` of type `String!`
+  """
+  cardName: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`description` of type `String`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`elementType` of type `String!`
+  """
+  elementType: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`imageUrl` of type `String`
+  """
+  imageUrl: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`isTradable` of type `Boolean`
+  """
+  isTradable: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel` of type `Int`
+  """
+  maxLevel: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`rarity` of type `String!`
+  """
+  rarity: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`abilityText_count` of type `Int!`
+  """
+  abilityText_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_count` of type `Int!`
+  """
+  baseAttack_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_count` of type `Int!`
+  """
+  baseDefense_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`cardName_count` of type `Int!`
+  """
+  cardName_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`elementType_count` of type `Int!`
+  """
+  elementType_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`imageUrl_count` of type `Int!`
+  """
+  imageUrl_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`isTradable_count` of type `Int!`
+  """
+  isTradable_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_count` of type `Int!`
+  """
+  maxLevel_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`rarity_count` of type `Int!`
+  """
+  rarity_count: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_sum` of type `Int`
+  """
+  baseAttack_sum: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_sum` of type `Int`
+  """
+  baseDefense_sum: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_sum` of type `Int`
+  """
+  maxLevel_sum: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_avg` of type `Float`
+  """
+  baseAttack_avg: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_avg` of type `Float`
+  """
+  baseDefense_avg: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_avg` of type `Float`
+  """
+  maxLevel_avg: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_min` of type `Int`
+  """
+  baseAttack_min: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_min` of type `Int`
+  """
+  baseDefense_min: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_min` of type `Int`
+  """
+  maxLevel_min: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseAttack_max` of type `Int`
+  """
+  baseAttack_max: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`baseDefense_max` of type `Int`
+  """
+  baseDefense_max: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `AetheriaCard`.`maxLevel_max` of type `Int`
+  """
+  maxLevel_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Character'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Character_Data {
+  """
+  ✨ Generated from Field `Character`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Character`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Character`.`equippedDeckId` of type `UUID`
+  """
+  equippedDeckId: UUID
+  """
+  ✨ `_expr` server value variant of `equippedDeckId` (✨ Generated from Field `Character`.`equippedDeckId` of type `UUID`)
+  """
+  equippedDeckId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Character`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `Character`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Character`.`equippedDeck` of type `Deck`
+  """
+  equippedDeck: Deck_Key
+  """
+  ✨ Generated from Field `Character`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `Character`.`agility` of type `Int`
+  """
+  agility: Int
+  """
+  ✨ `_expr` server value variant of `agility` (✨ Generated from Field `Character`.`agility` of type `Int`)
+  """
+  agility_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `agility` (✨ Generated from Field `Character`.`agility` of type `Int`)
+  """
+  agility_update: [Int_Update!]
+  """
+  ✨ Generated from Field `Character`.`characterClass` of type `String!`
+  """
+  characterClass: String
+  """
+  ✨ `_expr` server value variant of `characterClass` (✨ Generated from Field `Character`.`characterClass` of type `String!`)
+  """
+  characterClass_expr: String_Expr
+  """
+  ✨ Generated from Field `Character`.`characterName` of type `String!`
+  """
+  characterName: String
+  """
+  ✨ `_expr` server value variant of `characterName` (✨ Generated from Field `Character`.`characterName` of type `String!`)
+  """
+  characterName_expr: String_Expr
+  """
+  ✨ Generated from Field `Character`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Character`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Character`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Character`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Character`.`experience` of type `Int!`
+  """
+  experience: Int
+  """
+  ✨ `_expr` server value variant of `experience` (✨ Generated from Field `Character`.`experience` of type `Int!`)
+  """
+  experience_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `experience` (✨ Generated from Field `Character`.`experience` of type `Int!`)
+  """
+  experience_update: [Int_Update!]
+  """
+  ✨ Generated from Field `Character`.`health` of type `Int`
+  """
+  health: Int
+  """
+  ✨ `_expr` server value variant of `health` (✨ Generated from Field `Character`.`health` of type `Int`)
+  """
+  health_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `health` (✨ Generated from Field `Character`.`health` of type `Int`)
+  """
+  health_update: [Int_Update!]
+  """
+  ✨ Generated from Field `Character`.`intelligence` of type `Int`
+  """
+  intelligence: Int
+  """
+  ✨ `_expr` server value variant of `intelligence` (✨ Generated from Field `Character`.`intelligence` of type `Int`)
+  """
+  intelligence_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `intelligence` (✨ Generated from Field `Character`.`intelligence` of type `Int`)
+  """
+  intelligence_update: [Int_Update!]
+  """
+  ✨ Generated from Field `Character`.`level` of type `Int!`
+  """
+  level: Int
+  """
+  ✨ `_expr` server value variant of `level` (✨ Generated from Field `Character`.`level` of type `Int!`)
+  """
+  level_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `level` (✨ Generated from Field `Character`.`level` of type `Int!`)
+  """
+  level_update: [Int_Update!]
+  """
+  ✨ Generated from Field `Character`.`mana` of type `Int`
+  """
+  mana: Int
+  """
+  ✨ `_expr` server value variant of `mana` (✨ Generated from Field `Character`.`mana` of type `Int`)
+  """
+  mana_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `mana` (✨ Generated from Field `Character`.`mana` of type `Int`)
+  """
+  mana_update: [Int_Update!]
+  """
+  ✨ Generated from Field `Character`.`strength` of type `Int`
+  """
+  strength: Int
+  """
+  ✨ `_expr` server value variant of `strength` (✨ Generated from Field `Character`.`strength` of type `Int`)
+  """
+  strength_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `strength` (✨ Generated from Field `Character`.`strength` of type `Int`)
+  """
+  strength_update: [Int_Update!]
+}
+"""
+✨ Generated filter input type for table 'Character'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Character_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Character_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Character_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Character_Filter!]
+  """
+  ✨ Generated from Field `Character`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Character`.`equippedDeckId` of type `UUID`
+  """
+  equippedDeckId: UUID_Filter
+  """
+  ✨ Generated from Field `Character`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `Character`.`equippedDeck` of type `Deck`
+  """
+  equippedDeck: Deck_Filter
+  """
+  ✨ Generated from Field `Character`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `Character`.`agility` of type `Int`
+  """
+  agility: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`characterClass` of type `String!`
+  """
+  characterClass: String_Filter
+  """
+  ✨ Generated from Field `Character`.`characterName` of type `String!`
+  """
+  characterName: String_Filter
+  """
+  ✨ Generated from Field `Character`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Character`.`experience` of type `Int!`
+  """
+  experience: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`health` of type `Int`
+  """
+  health: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`intelligence` of type `Int`
+  """
+  intelligence: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`level` of type `Int!`
+  """
+  level: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`mana` of type `Int`
+  """
+  mana: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`strength` of type `Int`
+  """
+  strength: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`decks_on_character` of type `[Deck!]!`
+  """
+  decks_on_character: Deck_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Character'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Character_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Character_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Character_Filter
+}
+"""
+✨ Generated having input type for table 'Character'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Character_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Character_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Character_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Character_Having!]
+  """
+  ✨ Generated from Field `Character`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`agility_count` of type `Int!`
+  """
+  agility_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`characterClass_count` of type `Int!`
+  """
+  characterClass_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`characterName_count` of type `Int!`
+  """
+  characterName_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`equippedDeckId_count` of type `Int!`
+  """
+  equippedDeckId_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`experience_count` of type `Int!`
+  """
+  experience_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`health_count` of type `Int!`
+  """
+  health_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`intelligence_count` of type `Int!`
+  """
+  intelligence_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`level_count` of type `Int!`
+  """
+  level_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`mana_count` of type `Int!`
+  """
+  mana_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`strength_count` of type `Int!`
+  """
+  strength_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`agility_sum` of type `Int`
+  """
+  agility_sum: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`experience_sum` of type `Int`
+  """
+  experience_sum: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`health_sum` of type `Int`
+  """
+  health_sum: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`intelligence_sum` of type `Int`
+  """
+  intelligence_sum: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`level_sum` of type `Int`
+  """
+  level_sum: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`mana_sum` of type `Int`
+  """
+  mana_sum: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`strength_sum` of type `Int`
+  """
+  strength_sum: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`agility_avg` of type `Float`
+  """
+  agility_avg: Float_Filter
+  """
+  ✨ Generated from Field `Character`.`experience_avg` of type `Float`
+  """
+  experience_avg: Float_Filter
+  """
+  ✨ Generated from Field `Character`.`health_avg` of type `Float`
+  """
+  health_avg: Float_Filter
+  """
+  ✨ Generated from Field `Character`.`intelligence_avg` of type `Float`
+  """
+  intelligence_avg: Float_Filter
+  """
+  ✨ Generated from Field `Character`.`level_avg` of type `Float`
+  """
+  level_avg: Float_Filter
+  """
+  ✨ Generated from Field `Character`.`mana_avg` of type `Float`
+  """
+  mana_avg: Float_Filter
+  """
+  ✨ Generated from Field `Character`.`strength_avg` of type `Float`
+  """
+  strength_avg: Float_Filter
+  """
+  ✨ Generated from Field `Character`.`agility_min` of type `Int`
+  """
+  agility_min: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Character`.`experience_min` of type `Int`
+  """
+  experience_min: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`health_min` of type `Int`
+  """
+  health_min: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`intelligence_min` of type `Int`
+  """
+  intelligence_min: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`level_min` of type `Int`
+  """
+  level_min: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`mana_min` of type `Int`
+  """
+  mana_min: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`strength_min` of type `Int`
+  """
+  strength_min: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`agility_max` of type `Int`
+  """
+  agility_max: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Character`.`experience_max` of type `Int`
+  """
+  experience_max: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`health_max` of type `Int`
+  """
+  health_max: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`intelligence_max` of type `Int`
+  """
+  intelligence_max: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`level_max` of type `Int`
+  """
+  level_max: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`mana_max` of type `Int`
+  """
+  mana_max: Int_Filter
+  """
+  ✨ Generated from Field `Character`.`strength_max` of type `Int`
+  """
+  strength_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Character'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Character_Key {
+  """
+  ✨ Generated from Field `Character`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Character`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Character'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Character_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Character_Filter
+}
+"""
+✨ Generated order input type for table 'Character'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Character_Order {
+  """
+  ✨ Generated from Field `Character`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`equippedDeckId` of type `UUID`
+  """
+  equippedDeckId: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`equippedDeck` of type `Deck`
+  """
+  equippedDeck: Deck_Order
+  """
+  ✨ Generated from Field `Character`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `Character`.`agility` of type `Int`
+  """
+  agility: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`characterClass` of type `String!`
+  """
+  characterClass: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`characterName` of type `String!`
+  """
+  characterName: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`experience` of type `Int!`
+  """
+  experience: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`health` of type `Int`
+  """
+  health: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`intelligence` of type `Int`
+  """
+  intelligence: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`level` of type `Int!`
+  """
+  level: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`mana` of type `Int`
+  """
+  mana: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`strength` of type `Int`
+  """
+  strength: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`agility_count` of type `Int!`
+  """
+  agility_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`characterClass_count` of type `Int!`
+  """
+  characterClass_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`characterName_count` of type `Int!`
+  """
+  characterName_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`equippedDeckId_count` of type `Int!`
+  """
+  equippedDeckId_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`experience_count` of type `Int!`
+  """
+  experience_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`health_count` of type `Int!`
+  """
+  health_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`intelligence_count` of type `Int!`
+  """
+  intelligence_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`level_count` of type `Int!`
+  """
+  level_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`mana_count` of type `Int!`
+  """
+  mana_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`strength_count` of type `Int!`
+  """
+  strength_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`agility_sum` of type `Int`
+  """
+  agility_sum: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`experience_sum` of type `Int`
+  """
+  experience_sum: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`health_sum` of type `Int`
+  """
+  health_sum: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`intelligence_sum` of type `Int`
+  """
+  intelligence_sum: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`level_sum` of type `Int`
+  """
+  level_sum: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`mana_sum` of type `Int`
+  """
+  mana_sum: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`strength_sum` of type `Int`
+  """
+  strength_sum: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`agility_avg` of type `Float`
+  """
+  agility_avg: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`experience_avg` of type `Float`
+  """
+  experience_avg: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`health_avg` of type `Float`
+  """
+  health_avg: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`intelligence_avg` of type `Float`
+  """
+  intelligence_avg: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`level_avg` of type `Float`
+  """
+  level_avg: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`mana_avg` of type `Float`
+  """
+  mana_avg: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`strength_avg` of type `Float`
+  """
+  strength_avg: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`agility_min` of type `Int`
+  """
+  agility_min: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`experience_min` of type `Int`
+  """
+  experience_min: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`health_min` of type `Int`
+  """
+  health_min: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`intelligence_min` of type `Int`
+  """
+  intelligence_min: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`level_min` of type `Int`
+  """
+  level_min: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`mana_min` of type `Int`
+  """
+  mana_min: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`strength_min` of type `Int`
+  """
+  strength_min: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`agility_max` of type `Int`
+  """
+  agility_max: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`experience_max` of type `Int`
+  """
+  experience_max: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`health_max` of type `Int`
+  """
+  health_max: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`intelligence_max` of type `Int`
+  """
+  intelligence_max: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`level_max` of type `Int`
+  """
+  level_max: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`mana_max` of type `Int`
+  """
+  mana_max: OrderDirection
+  """
+  ✨ Generated from Field `Character`.`strength_max` of type `Int`
+  """
+  strength_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Deck'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Deck_Data {
+  """
+  ✨ Generated from Field `Deck`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Deck`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Deck`.`characterId` of type `UUID!`
+  """
+  characterId: UUID
+  """
+  ✨ `_expr` server value variant of `characterId` (✨ Generated from Field `Deck`.`characterId` of type `UUID!`)
+  """
+  characterId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Deck`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `Deck`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Deck`.`character` of type `Character!`
+  """
+  character: Character_Key
+  """
+  ✨ Generated from Field `Deck`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `Deck`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Deck`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Deck`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Deck`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Deck`.`deckName` of type `String!`
+  """
+  deckName: String
+  """
+  ✨ `_expr` server value variant of `deckName` (✨ Generated from Field `Deck`.`deckName` of type `String!`)
+  """
+  deckName_expr: String_Expr
+  """
+  ✨ Generated from Field `Deck`.`description` of type `String`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Deck`.`description` of type `String`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Deck`.`isActive` of type `Boolean`
+  """
+  isActive: Boolean
+  """
+  ✨ `_expr` server value variant of `isActive` (✨ Generated from Field `Deck`.`isActive` of type `Boolean`)
+  """
+  isActive_expr: Boolean_Expr
+}
+"""
+✨ Generated filter input type for table 'Deck'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Deck_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Deck_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Deck_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Deck_Filter!]
+  """
+  ✨ Generated from Field `Deck`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Deck`.`characterId` of type `UUID!`
+  """
+  characterId: UUID_Filter
+  """
+  ✨ Generated from Field `Deck`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `Deck`.`character` of type `Character!`
+  """
+  character: Character_Filter
+  """
+  ✨ Generated from Field `Deck`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `Deck`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Deck`.`deckName` of type `String!`
+  """
+  deckName: String_Filter
+  """
+  ✨ Generated from Field `Deck`.`description` of type `String`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Deck`.`isActive` of type `Boolean`
+  """
+  isActive: Boolean_Filter
+  """
+  ✨ Generated from Field `Deck`.`characters_on_equippedDeck` of type `[Character!]!`
+  """
+  characters_on_equippedDeck: Character_ListFilter
+  """
+  ✨ Generated from Field `Deck`.`deckCards_on_deck` of type `[DeckCard!]!`
+  """
+  deckCards_on_deck: DeckCard_ListFilter
+  """
+  ✨ Generated from Field `Deck`.`playerCards_via_DeckCard` of type `[PlayerCard!]!`
+  """
+  playerCards_via_DeckCard: PlayerCard_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Deck'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Deck_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Deck_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Deck_Filter
+}
+"""
+✨ Generated having input type for table 'Deck'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Deck_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Deck_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Deck_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Deck_Having!]
+  """
+  ✨ Generated from Field `Deck`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Deck`.`characterId_count` of type `Int!`
+  """
+  characterId_count: Int_Filter
+  """
+  ✨ Generated from Field `Deck`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Deck`.`deckName_count` of type `Int!`
+  """
+  deckName_count: Int_Filter
+  """
+  ✨ Generated from Field `Deck`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `Deck`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Deck`.`isActive_count` of type `Int!`
+  """
+  isActive_count: Int_Filter
+  """
+  ✨ Generated from Field `Deck`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `Deck`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Deck`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'Deck'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Deck_Key {
+  """
+  ✨ Generated from Field `Deck`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Deck`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Deck'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Deck_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Deck_Filter
+}
+"""
+✨ Generated order input type for table 'Deck'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Deck_Order {
+  """
+  ✨ Generated from Field `Deck`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`characterId` of type `UUID!`
+  """
+  characterId: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`character` of type `Character!`
+  """
+  character: Character_Order
+  """
+  ✨ Generated from Field `Deck`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `Deck`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`deckName` of type `String!`
+  """
+  deckName: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`description` of type `String`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`isActive` of type `Boolean`
+  """
+  isActive: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`characterId_count` of type `Int!`
+  """
+  characterId_count: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`deckName_count` of type `Int!`
+  """
+  deckName_count: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`isActive_count` of type `Int!`
+  """
+  isActive_count: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Deck`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'DeckCard'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input DeckCard_Data {
+  """
+  ✨ Generated from Field `DeckCard`.`deckId` of type `UUID!`
+  """
+  deckId: UUID
+  """
+  ✨ `_expr` server value variant of `deckId` (✨ Generated from Field `DeckCard`.`deckId` of type `UUID!`)
+  """
+  deckId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `DeckCard`.`playerCardId` of type `UUID!`
+  """
+  playerCardId: UUID
+  """
+  ✨ `_expr` server value variant of `playerCardId` (✨ Generated from Field `DeckCard`.`playerCardId` of type `UUID!`)
+  """
+  playerCardId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `DeckCard`.`deck` of type `Deck!`
+  """
+  deck: Deck_Key
+  """
+  ✨ Generated from Field `DeckCard`.`playerCard` of type `PlayerCard!`
+  """
+  playerCard: PlayerCard_Key
+  """
+  ✨ Generated from Field `DeckCard`.`isMainDeckCard` of type `Boolean`
+  """
+  isMainDeckCard: Boolean
+  """
+  ✨ `_expr` server value variant of `isMainDeckCard` (✨ Generated from Field `DeckCard`.`isMainDeckCard` of type `Boolean`)
+  """
+  isMainDeckCard_expr: Boolean_Expr
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck` of type `Int!`
+  """
+  positionInDeck: Int
+  """
+  ✨ `_expr` server value variant of `positionInDeck` (✨ Generated from Field `DeckCard`.`positionInDeck` of type `Int!`)
+  """
+  positionInDeck_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `positionInDeck` (✨ Generated from Field `DeckCard`.`positionInDeck` of type `Int!`)
+  """
+  positionInDeck_update: [Int_Update!]
+}
+"""
+✨ Generated filter input type for table 'DeckCard'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input DeckCard_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [DeckCard_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: DeckCard_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [DeckCard_Filter!]
+  """
+  ✨ Generated from Field `DeckCard`.`deckId` of type `UUID!`
+  """
+  deckId: UUID_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`playerCardId` of type `UUID!`
+  """
+  playerCardId: UUID_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`deck` of type `Deck!`
+  """
+  deck: Deck_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`playerCard` of type `PlayerCard!`
+  """
+  playerCard: PlayerCard_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`isMainDeckCard` of type `Boolean`
+  """
+  isMainDeckCard: Boolean_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck` of type `Int!`
+  """
+  positionInDeck: Int_Filter
+}
+"""
+✨ Generated first-row input type for table 'DeckCard'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input DeckCard_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [DeckCard_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: DeckCard_Filter
+}
+"""
+✨ Generated having input type for table 'DeckCard'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input DeckCard_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [DeckCard_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: DeckCard_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [DeckCard_Having!]
+  """
+  ✨ Generated from Field `DeckCard`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`deckId_count` of type `Int!`
+  """
+  deckId_count: Int_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`isMainDeckCard_count` of type `Int!`
+  """
+  isMainDeckCard_count: Int_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`playerCardId_count` of type `Int!`
+  """
+  playerCardId_count: Int_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_count` of type `Int!`
+  """
+  positionInDeck_count: Int_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_sum` of type `Int`
+  """
+  positionInDeck_sum: Int_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_avg` of type `Float`
+  """
+  positionInDeck_avg: Float_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_min` of type `Int`
+  """
+  positionInDeck_min: Int_Filter
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_max` of type `Int`
+  """
+  positionInDeck_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'DeckCard'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input DeckCard_Key {
+  """
+  ✨ Generated from Field `DeckCard`.`deckId` of type `UUID!`
+  """
+  deckId: UUID
+  """
+  ✨ `_expr` server value variant of `deckId` (✨ Generated from Field `DeckCard`.`deckId` of type `UUID!`)
+  """
+  deckId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `DeckCard`.`playerCardId` of type `UUID!`
+  """
+  playerCardId: UUID
+  """
+  ✨ `_expr` server value variant of `playerCardId` (✨ Generated from Field `DeckCard`.`playerCardId` of type `UUID!`)
+  """
+  playerCardId_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'DeckCard'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input DeckCard_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: DeckCard_Filter
+}
+"""
+✨ Generated order input type for table 'DeckCard'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input DeckCard_Order {
+  """
+  ✨ Generated from Field `DeckCard`.`deckId` of type `UUID!`
+  """
+  deckId: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`playerCardId` of type `UUID!`
+  """
+  playerCardId: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`deck` of type `Deck!`
+  """
+  deck: Deck_Order
+  """
+  ✨ Generated from Field `DeckCard`.`playerCard` of type `PlayerCard!`
+  """
+  playerCard: PlayerCard_Order
+  """
+  ✨ Generated from Field `DeckCard`.`isMainDeckCard` of type `Boolean`
+  """
+  isMainDeckCard: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck` of type `Int!`
+  """
+  positionInDeck: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`deckId_count` of type `Int!`
+  """
+  deckId_count: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`isMainDeckCard_count` of type `Int!`
+  """
+  isMainDeckCard_count: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`playerCardId_count` of type `Int!`
+  """
+  playerCardId_count: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_count` of type `Int!`
+  """
+  positionInDeck_count: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_sum` of type `Int`
+  """
+  positionInDeck_sum: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_avg` of type `Float`
+  """
+  positionInDeck_avg: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_min` of type `Int`
+  """
+  positionInDeck_min: OrderDirection
+  """
+  ✨ Generated from Field `DeckCard`.`positionInDeck_max` of type `Int`
+  """
+  positionInDeck_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'PlayerCard'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input PlayerCard_Data {
+  """
+  ✨ Generated from Field `PlayerCard`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `PlayerCard`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `PlayerCard`.`aetheriaCardId` of type `UUID!`
+  """
+  aetheriaCardId: UUID
+  """
+  ✨ `_expr` server value variant of `aetheriaCardId` (✨ Generated from Field `PlayerCard`.`aetheriaCardId` of type `UUID!`)
+  """
+  aetheriaCardId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `PlayerCard`.`ownerId` of type `UUID!`
+  """
+  ownerId: UUID
+  """
+  ✨ `_expr` server value variant of `ownerId` (✨ Generated from Field `PlayerCard`.`ownerId` of type `UUID!`)
+  """
+  ownerId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `PlayerCard`.`aetheriaCard` of type `AetheriaCard!`
+  """
+  aetheriaCard: AetheriaCard_Key
+  """
+  ✨ Generated from Field `PlayerCard`.`owner` of type `User!`
+  """
+  owner: User_Key
+  """
+  ✨ Generated from Field `PlayerCard`.`cardInstanceId` of type `UUID!`
+  """
+  cardInstanceId: UUID
+  """
+  ✨ `_expr` server value variant of `cardInstanceId` (✨ Generated from Field `PlayerCard`.`cardInstanceId` of type `UUID!`)
+  """
+  cardInstanceId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `PlayerCard`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `PlayerCard`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `PlayerCard`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `PlayerCard`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack` of type `Int`
+  """
+  currentAttack: Int
+  """
+  ✨ `_expr` server value variant of `currentAttack` (✨ Generated from Field `PlayerCard`.`currentAttack` of type `Int`)
+  """
+  currentAttack_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `currentAttack` (✨ Generated from Field `PlayerCard`.`currentAttack` of type `Int`)
+  """
+  currentAttack_update: [Int_Update!]
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense` of type `Int`
+  """
+  currentDefense: Int
+  """
+  ✨ `_expr` server value variant of `currentDefense` (✨ Generated from Field `PlayerCard`.`currentDefense` of type `Int`)
+  """
+  currentDefense_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `currentDefense` (✨ Generated from Field `PlayerCard`.`currentDefense` of type `Int`)
+  """
+  currentDefense_update: [Int_Update!]
+  """
+  ✨ Generated from Field `PlayerCard`.`equippedSlot` of type `String`
+  """
+  equippedSlot: String
+  """
+  ✨ `_expr` server value variant of `equippedSlot` (✨ Generated from Field `PlayerCard`.`equippedSlot` of type `String`)
+  """
+  equippedSlot_expr: String_Expr
+  """
+  ✨ Generated from Field `PlayerCard`.`experience` of type `Int!`
+  """
+  experience: Int
+  """
+  ✨ `_expr` server value variant of `experience` (✨ Generated from Field `PlayerCard`.`experience` of type `Int!`)
+  """
+  experience_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `experience` (✨ Generated from Field `PlayerCard`.`experience` of type `Int!`)
+  """
+  experience_update: [Int_Update!]
+  """
+  ✨ Generated from Field `PlayerCard`.`isEquipped` of type `Boolean`
+  """
+  isEquipped: Boolean
+  """
+  ✨ `_expr` server value variant of `isEquipped` (✨ Generated from Field `PlayerCard`.`isEquipped` of type `Boolean`)
+  """
+  isEquipped_expr: Boolean_Expr
+  """
+  ✨ Generated from Field `PlayerCard`.`level` of type `Int!`
+  """
+  level: Int
+  """
+  ✨ `_expr` server value variant of `level` (✨ Generated from Field `PlayerCard`.`level` of type `Int!`)
+  """
+  level_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `level` (✨ Generated from Field `PlayerCard`.`level` of type `Int!`)
+  """
+  level_update: [Int_Update!]
+}
+"""
+✨ Generated filter input type for table 'PlayerCard'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input PlayerCard_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [PlayerCard_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: PlayerCard_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [PlayerCard_Filter!]
+  """
+  ✨ Generated from Field `PlayerCard`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`aetheriaCardId` of type `UUID!`
+  """
+  aetheriaCardId: UUID_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`ownerId` of type `UUID!`
+  """
+  ownerId: UUID_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`aetheriaCard` of type `AetheriaCard!`
+  """
+  aetheriaCard: AetheriaCard_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`owner` of type `User!`
+  """
+  owner: User_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`cardInstanceId` of type `UUID!`
+  """
+  cardInstanceId: UUID_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack` of type `Int`
+  """
+  currentAttack: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense` of type `Int`
+  """
+  currentDefense: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`equippedSlot` of type `String`
+  """
+  equippedSlot: String_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`experience` of type `Int!`
+  """
+  experience: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`isEquipped` of type `Boolean`
+  """
+  isEquipped: Boolean_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`level` of type `Int!`
+  """
+  level: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`deckCards_on_playerCard` of type `[DeckCard!]!`
+  """
+  deckCards_on_playerCard: DeckCard_ListFilter
+  """
+  ✨ Generated from Field `PlayerCard`.`decks_via_DeckCard` of type `[Deck!]!`
+  """
+  decks_via_DeckCard: Deck_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'PlayerCard'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input PlayerCard_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [PlayerCard_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: PlayerCard_Filter
+}
+"""
+✨ Generated having input type for table 'PlayerCard'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input PlayerCard_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [PlayerCard_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: PlayerCard_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [PlayerCard_Having!]
+  """
+  ✨ Generated from Field `PlayerCard`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`aetheriaCardId_count` of type `Int!`
+  """
+  aetheriaCardId_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`cardInstanceId_count` of type `Int!`
+  """
+  cardInstanceId_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_count` of type `Int!`
+  """
+  currentAttack_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_count` of type `Int!`
+  """
+  currentDefense_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`equippedSlot_count` of type `Int!`
+  """
+  equippedSlot_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_count` of type `Int!`
+  """
+  experience_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`isEquipped_count` of type `Int!`
+  """
+  isEquipped_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`level_count` of type `Int!`
+  """
+  level_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`ownerId_count` of type `Int!`
+  """
+  ownerId_count: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_sum` of type `Int`
+  """
+  currentAttack_sum: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_sum` of type `Int`
+  """
+  currentDefense_sum: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_sum` of type `Int`
+  """
+  experience_sum: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`level_sum` of type `Int`
+  """
+  level_sum: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_avg` of type `Float`
+  """
+  currentAttack_avg: Float_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_avg` of type `Float`
+  """
+  currentDefense_avg: Float_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_avg` of type `Float`
+  """
+  experience_avg: Float_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`level_avg` of type `Float`
+  """
+  level_avg: Float_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_min` of type `Int`
+  """
+  currentAttack_min: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_min` of type `Int`
+  """
+  currentDefense_min: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_min` of type `Int`
+  """
+  experience_min: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`level_min` of type `Int`
+  """
+  level_min: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_max` of type `Int`
+  """
+  currentAttack_max: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_max` of type `Int`
+  """
+  currentDefense_max: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_max` of type `Int`
+  """
+  experience_max: Int_Filter
+  """
+  ✨ Generated from Field `PlayerCard`.`level_max` of type `Int`
+  """
+  level_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'PlayerCard'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input PlayerCard_Key {
+  """
+  ✨ Generated from Field `PlayerCard`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `PlayerCard`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'PlayerCard'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input PlayerCard_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: PlayerCard_Filter
+}
+"""
+✨ Generated order input type for table 'PlayerCard'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input PlayerCard_Order {
+  """
+  ✨ Generated from Field `PlayerCard`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`aetheriaCardId` of type `UUID!`
+  """
+  aetheriaCardId: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`ownerId` of type `UUID!`
+  """
+  ownerId: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`aetheriaCard` of type `AetheriaCard!`
+  """
+  aetheriaCard: AetheriaCard_Order
+  """
+  ✨ Generated from Field `PlayerCard`.`owner` of type `User!`
+  """
+  owner: User_Order
+  """
+  ✨ Generated from Field `PlayerCard`.`cardInstanceId` of type `UUID!`
+  """
+  cardInstanceId: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack` of type `Int`
+  """
+  currentAttack: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense` of type `Int`
+  """
+  currentDefense: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`equippedSlot` of type `String`
+  """
+  equippedSlot: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`experience` of type `Int!`
+  """
+  experience: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`isEquipped` of type `Boolean`
+  """
+  isEquipped: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`level` of type `Int!`
+  """
+  level: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`aetheriaCardId_count` of type `Int!`
+  """
+  aetheriaCardId_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`cardInstanceId_count` of type `Int!`
+  """
+  cardInstanceId_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_count` of type `Int!`
+  """
+  currentAttack_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_count` of type `Int!`
+  """
+  currentDefense_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`equippedSlot_count` of type `Int!`
+  """
+  equippedSlot_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_count` of type `Int!`
+  """
+  experience_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`isEquipped_count` of type `Int!`
+  """
+  isEquipped_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`level_count` of type `Int!`
+  """
+  level_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`ownerId_count` of type `Int!`
+  """
+  ownerId_count: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_sum` of type `Int`
+  """
+  currentAttack_sum: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_sum` of type `Int`
+  """
+  currentDefense_sum: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_sum` of type `Int`
+  """
+  experience_sum: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`level_sum` of type `Int`
+  """
+  level_sum: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_avg` of type `Float`
+  """
+  currentAttack_avg: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_avg` of type `Float`
+  """
+  currentDefense_avg: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_avg` of type `Float`
+  """
+  experience_avg: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`level_avg` of type `Float`
+  """
+  level_avg: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_min` of type `Int`
+  """
+  currentAttack_min: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_min` of type `Int`
+  """
+  currentDefense_min: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_min` of type `Int`
+  """
+  experience_min: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`level_min` of type `Int`
+  """
+  level_min: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentAttack_max` of type `Int`
+  """
+  currentAttack_max: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`currentDefense_max` of type `Int`
+  """
+  currentDefense_max: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`experience_max` of type `Int`
+  """
+  experience_max: OrderDirection
+  """
+  ✨ Generated from Field `PlayerCard`.`level_max` of type `Int`
+  """
+  level_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Transaction'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Transaction_Data {
+  """
+  ✨ Generated from Field `Transaction`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Transaction`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Transaction`.`initiatorUserId` of type `UUID!`
+  """
+  initiatorUserId: UUID
+  """
+  ✨ `_expr` server value variant of `initiatorUserId` (✨ Generated from Field `Transaction`.`initiatorUserId` of type `UUID!`)
+  """
+  initiatorUserId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Transaction`.`targetUserId` of type `UUID`
+  """
+  targetUserId: UUID
+  """
+  ✨ `_expr` server value variant of `targetUserId` (✨ Generated from Field `Transaction`.`targetUserId` of type `UUID`)
+  """
+  targetUserId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Transaction`.`initiatorUser` of type `User!`
+  """
+  initiatorUser: User_Key
+  """
+  ✨ Generated from Field `Transaction`.`targetUser` of type `User`
+  """
+  targetUser: User_Key
+  """
+  ✨ Generated from Field `Transaction`.`amount` of type `Float!`
+  """
+  amount: Float
+  """
+  ✨ `_expr` server value variant of `amount` (✨ Generated from Field `Transaction`.`amount` of type `Float!`)
+  """
+  amount_expr: Float_Expr
+  """
+  ✨ `_update` server value variant of `amount` (✨ Generated from Field `Transaction`.`amount` of type `Float!`)
+  """
+  amount_update: [Float_Update!]
+  """
+  ✨ Generated from Field `Transaction`.`assetId` of type `UUID!`
+  """
+  assetId: UUID
+  """
+  ✨ `_expr` server value variant of `assetId` (✨ Generated from Field `Transaction`.`assetId` of type `UUID!`)
+  """
+  assetId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Transaction`.`assetType` of type `String!`
+  """
+  assetType: String
+  """
+  ✨ `_expr` server value variant of `assetType` (✨ Generated from Field `Transaction`.`assetType` of type `String!`)
+  """
+  assetType_expr: String_Expr
+  """
+  ✨ Generated from Field `Transaction`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Transaction`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Transaction`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Transaction`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Transaction`.`currency` of type `String!`
+  """
+  currency: String
+  """
+  ✨ `_expr` server value variant of `currency` (✨ Generated from Field `Transaction`.`currency` of type `String!`)
+  """
+  currency_expr: String_Expr
+  """
+  ✨ Generated from Field `Transaction`.`marketplaceListingId` of type `UUID`
+  """
+  marketplaceListingId: UUID
+  """
+  ✨ `_expr` server value variant of `marketplaceListingId` (✨ Generated from Field `Transaction`.`marketplaceListingId` of type `UUID`)
+  """
+  marketplaceListingId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Transaction`.`status` of type `String`
+  """
+  status: String
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `Transaction`.`status` of type `String`)
+  """
+  status_expr: String_Expr
+  """
+  ✨ Generated from Field `Transaction`.`transactionHash` of type `String!`
+  """
+  transactionHash: String
+  """
+  ✨ `_expr` server value variant of `transactionHash` (✨ Generated from Field `Transaction`.`transactionHash` of type `String!`)
+  """
+  transactionHash_expr: String_Expr
+  """
+  ✨ Generated from Field `Transaction`.`transactionType` of type `String!`
+  """
+  transactionType: String
+  """
+  ✨ `_expr` server value variant of `transactionType` (✨ Generated from Field `Transaction`.`transactionType` of type `String!`)
+  """
+  transactionType_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Transaction'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Transaction_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Transaction_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Transaction_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Transaction_Filter!]
+  """
+  ✨ Generated from Field `Transaction`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Transaction`.`initiatorUserId` of type `UUID!`
+  """
+  initiatorUserId: UUID_Filter
+  """
+  ✨ Generated from Field `Transaction`.`targetUserId` of type `UUID`
+  """
+  targetUserId: UUID_Filter
+  """
+  ✨ Generated from Field `Transaction`.`initiatorUser` of type `User!`
+  """
+  initiatorUser: User_Filter
+  """
+  ✨ Generated from Field `Transaction`.`targetUser` of type `User`
+  """
+  targetUser: User_Filter
+  """
+  ✨ Generated from Field `Transaction`.`amount` of type `Float!`
+  """
+  amount: Float_Filter
+  """
+  ✨ Generated from Field `Transaction`.`assetId` of type `UUID!`
+  """
+  assetId: UUID_Filter
+  """
+  ✨ Generated from Field `Transaction`.`assetType` of type `String!`
+  """
+  assetType: String_Filter
+  """
+  ✨ Generated from Field `Transaction`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Transaction`.`currency` of type `String!`
+  """
+  currency: String_Filter
+  """
+  ✨ Generated from Field `Transaction`.`marketplaceListingId` of type `UUID`
+  """
+  marketplaceListingId: UUID_Filter
+  """
+  ✨ Generated from Field `Transaction`.`status` of type `String`
+  """
+  status: String_Filter
+  """
+  ✨ Generated from Field `Transaction`.`transactionHash` of type `String!`
+  """
+  transactionHash: String_Filter
+  """
+  ✨ Generated from Field `Transaction`.`transactionType` of type `String!`
+  """
+  transactionType: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'Transaction'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Transaction_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Transaction_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Transaction_Filter
+}
+"""
+✨ Generated having input type for table 'Transaction'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Transaction_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Transaction_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Transaction_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Transaction_Having!]
+  """
+  ✨ Generated from Field `Transaction`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`amount_count` of type `Int!`
+  """
+  amount_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`assetId_count` of type `Int!`
+  """
+  assetId_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`assetType_count` of type `Int!`
+  """
+  assetType_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`currency_count` of type `Int!`
+  """
+  currency_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`initiatorUserId_count` of type `Int!`
+  """
+  initiatorUserId_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`marketplaceListingId_count` of type `Int!`
+  """
+  marketplaceListingId_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`targetUserId_count` of type `Int!`
+  """
+  targetUserId_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`transactionHash_count` of type `Int!`
+  """
+  transactionHash_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`transactionType_count` of type `Int!`
+  """
+  transactionType_count: Int_Filter
+  """
+  ✨ Generated from Field `Transaction`.`amount_sum` of type `Float`
+  """
+  amount_sum: Float_Filter
+  """
+  ✨ Generated from Field `Transaction`.`amount_avg` of type `Float`
+  """
+  amount_avg: Float_Filter
+  """
+  ✨ Generated from Field `Transaction`.`amount_min` of type `Float`
+  """
+  amount_min: Float_Filter
+  """
+  ✨ Generated from Field `Transaction`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Transaction`.`amount_max` of type `Float`
+  """
+  amount_max: Float_Filter
+  """
+  ✨ Generated from Field `Transaction`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'Transaction'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Transaction_Key {
+  """
+  ✨ Generated from Field `Transaction`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Transaction`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Transaction'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Transaction_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Transaction_Filter
+}
+"""
+✨ Generated order input type for table 'Transaction'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Transaction_Order {
+  """
+  ✨ Generated from Field `Transaction`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`initiatorUserId` of type `UUID!`
+  """
+  initiatorUserId: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`targetUserId` of type `UUID`
+  """
+  targetUserId: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`initiatorUser` of type `User!`
+  """
+  initiatorUser: User_Order
+  """
+  ✨ Generated from Field `Transaction`.`targetUser` of type `User`
+  """
+  targetUser: User_Order
+  """
+  ✨ Generated from Field `Transaction`.`amount` of type `Float!`
+  """
+  amount: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`assetId` of type `UUID!`
+  """
+  assetId: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`assetType` of type `String!`
+  """
+  assetType: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`currency` of type `String!`
+  """
+  currency: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`marketplaceListingId` of type `UUID`
+  """
+  marketplaceListingId: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`status` of type `String`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`transactionHash` of type `String!`
+  """
+  transactionHash: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`transactionType` of type `String!`
+  """
+  transactionType: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`amount_count` of type `Int!`
+  """
+  amount_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`assetId_count` of type `Int!`
+  """
+  assetId_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`assetType_count` of type `Int!`
+  """
+  assetType_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`currency_count` of type `Int!`
+  """
+  currency_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`initiatorUserId_count` of type `Int!`
+  """
+  initiatorUserId_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`marketplaceListingId_count` of type `Int!`
+  """
+  marketplaceListingId_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`targetUserId_count` of type `Int!`
+  """
+  targetUserId_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`transactionHash_count` of type `Int!`
+  """
+  transactionHash_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`transactionType_count` of type `Int!`
+  """
+  transactionType_count: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`amount_sum` of type `Float`
+  """
+  amount_sum: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`amount_avg` of type `Float`
+  """
+  amount_avg: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`amount_min` of type `Float`
+  """
+  amount_min: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`amount_max` of type `Float`
+  """
+  amount_max: OrderDirection
+  """
+  ✨ Generated from Field `Transaction`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'User'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input User_Data {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String
+  """
+  ✨ `_expr` server value variant of `email` (✨ Generated from Field `User`.`email` of type `String!`)
+  """
+  email_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`
+  """
+  lastLoginAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `lastLoginAt` (✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`)
+  """
+  lastLoginAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `lastLoginAt` (✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`)
+  """
+  lastLoginAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `lastLoginAt` (✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`)
+  """
+  lastLoginAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl` of type `String`
+  """
+  profilePictureUrl: String
+  """
+  ✨ `_expr` server value variant of `profilePictureUrl` (✨ Generated from Field `User`.`profilePictureUrl` of type `String`)
+  """
+  profilePictureUrl_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`username` of type `String!`
+  """
+  username: String
+  """
+  ✨ `_expr` server value variant of `username` (✨ Generated from Field `User`.`username` of type `String!`)
+  """
+  username_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`walletAddress` of type `String`
+  """
+  walletAddress: String
+  """
+  ✨ `_expr` server value variant of `walletAddress` (✨ Generated from Field `User`.`walletAddress` of type `String`)
+  """
+  walletAddress_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'User'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [User_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: User_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [User_Filter!]
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String_Filter
+  """
+  ✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`
+  """
+  lastLoginAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl` of type `String`
+  """
+  profilePictureUrl: String_Filter
+  """
+  ✨ Generated from Field `User`.`username` of type `String!`
+  """
+  username: String_Filter
+  """
+  ✨ Generated from Field `User`.`walletAddress` of type `String`
+  """
+  walletAddress: String_Filter
+  """
+  ✨ Generated from Field `User`.`characters_on_user` of type `[Character!]!`
+  """
+  characters_on_user: Character_ListFilter
+  """
+  ✨ Generated from Field `User`.`decks_on_user` of type `[Deck!]!`
+  """
+  decks_on_user: Deck_ListFilter
+  """
+  ✨ Generated from Field `User`.`playerCards_on_owner` of type `[PlayerCard!]!`
+  """
+  playerCards_on_owner: PlayerCard_ListFilter
+  """
+  ✨ Generated from Field `User`.`transactions_on_initiatorUser` of type `[Transaction!]!`
+  """
+  transactions_on_initiatorUser: Transaction_ListFilter
+  """
+  ✨ Generated from Field `User`.`transactions_on_targetUser` of type `[Transaction!]!`
+  """
+  transactions_on_targetUser: Transaction_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'User'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input User_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [User_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: User_Filter
+}
+"""
+✨ Generated having input type for table 'User'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [User_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: User_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [User_Having!]
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_count` of type `Int!`
+  """
+  lastLoginAt_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl_count` of type `Int!`
+  """
+  profilePictureUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`username_count` of type `Int!`
+  """
+  username_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`walletAddress_count` of type `Int!`
+  """
+  walletAddress_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_min` of type `Timestamp`
+  """
+  lastLoginAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_max` of type `Timestamp`
+  """
+  lastLoginAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'User'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input User_Key {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'User'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input User_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: User_Filter
+}
+"""
+✨ Generated order input type for table 'User'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input User_Order {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`
+  """
+  lastLoginAt: OrderDirection
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl` of type `String`
+  """
+  profilePictureUrl: OrderDirection
+  """
+  ✨ Generated from Field `User`.`username` of type `String!`
+  """
+  username: OrderDirection
+  """
+  ✨ Generated from Field `User`.`walletAddress` of type `String`
+  """
+  walletAddress: OrderDirection
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_count` of type `Int!`
+  """
+  lastLoginAt_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl_count` of type `Int!`
+  """
+  profilePictureUrl_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`username_count` of type `Int!`
+  """
+  username_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`walletAddress_count` of type `Int!`
+  """
+  walletAddress_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_min` of type `Timestamp`
+  """
+  lastLoginAt_min: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_max` of type `Timestamp`
+  """
+  lastLoginAt_max: OrderDirection
+}

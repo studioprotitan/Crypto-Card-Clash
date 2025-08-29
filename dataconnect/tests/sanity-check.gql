@@ -1,0 +1,18 @@
+query Sanity_ListCards($ownerId: String!) {
+  cards(ownerId: $ownerId) {
+    id
+    name
+    rarity
+    power
+  }
+}
+
+query Sanity_DefaultCard {
+  defaultCard {
+    id
+    name
+    rarity
+    power
+    ownerId
+  }
+}

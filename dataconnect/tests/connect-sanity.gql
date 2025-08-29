@@ -1,0 +1,7 @@
+query Sanity_UserForConnect($id: UUID!) {
+  users(id: { eq: $id }) {
+    id
+    email
+    stripeAccountId
+  }
+}

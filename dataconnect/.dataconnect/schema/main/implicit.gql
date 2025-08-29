@@ -1,0 +1,78 @@
+extend type AetheriaCard {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "AetheriaCard", purpose: IMPLICIT_KEY_FIELD)
+}
+extend type Character {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Character", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Character`.`equippedDeck`. It must match the value of `Deck`.`id`. See `@ref` for how to customize it.
+  """
+  equippedDeckId: UUID @fdc_generated(from: "Character.equippedDeck", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Character`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID! @fdc_generated(from: "Character.user", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Deck {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Deck", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Deck`.`character`. It must match the value of `Character`.`id`. See `@ref` for how to customize it.
+  """
+  characterId: UUID! @fdc_generated(from: "Deck.character", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Deck`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID! @fdc_generated(from: "Deck.user", purpose: IMPLICIT_REF_FIELD)
+}
+extend type DeckCard {
+  """
+  ✨ Implicit foreign key field based on `DeckCard`.`deck`. It must match the value of `Deck`.`id`. See `@ref` for how to customize it.
+  """
+  deckId: UUID! @fdc_generated(from: "DeckCard.deck", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `DeckCard`.`playerCard`. It must match the value of `PlayerCard`.`id`. See `@ref` for how to customize it.
+  """
+  playerCardId: UUID! @fdc_generated(from: "DeckCard.playerCard", purpose: IMPLICIT_REF_FIELD)
+}
+extend type PlayerCard {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "PlayerCard", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `PlayerCard`.`aetheriaCard`. It must match the value of `AetheriaCard`.`id`. See `@ref` for how to customize it.
+  """
+  aetheriaCardId: UUID! @fdc_generated(from: "PlayerCard.aetheriaCard", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `PlayerCard`.`owner`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  ownerId: UUID! @fdc_generated(from: "PlayerCard.owner", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Transaction {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Transaction", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Transaction`.`initiatorUser`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  initiatorUserId: UUID! @fdc_generated(from: "Transaction.initiatorUser", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Transaction`.`targetUser`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  targetUserId: UUID @fdc_generated(from: "Transaction.targetUser", purpose: IMPLICIT_REF_FIELD)
+}
+extend type User {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "User", purpose: IMPLICIT_KEY_FIELD)
+}

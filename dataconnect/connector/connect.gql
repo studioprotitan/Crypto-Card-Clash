@@ -1,0 +1,8 @@
+type ConnectAccount @table(key: "id") {
+  id: ID!
+  playerId: String!
+  provider: String!     # e.g., "stripe"
+  accountId: String!
+  status: String!
+  createdAt: Timestamp!
+}

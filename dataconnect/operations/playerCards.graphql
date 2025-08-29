@@ -1,0 +1,26 @@
+# Returns only the signed-in user’s cards via auth.uid
+query listMyPlayerCards @auth(level: USER) {
+  playerCards(where: { playerId: { eq_expr: "auth.uid" } }) {
+    id
+    card { name description attack defense }
+    level
+    quantity
+  }
+}
+
+# Adds a card for the signed-in user (no playerId param)
+# NOTE: Change UUID! to String! if your schema's cardId is String!
+mutation addCardToMe(
+  $cardId: UUID!
+  $level: Int!
+  $quantity: Int!
+) @auth(level: USER) {
+  playerCard_insert(
+    data: {
+      playerId_expr: "auth.uid"
+      cardId: $cardId
+      level: $level
+      quantity: $quantity
+    }
+  )
+}

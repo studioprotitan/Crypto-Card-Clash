@@ -1,0 +1,7 @@
+type Wallet @table(key: "id") {
+  id: ID!
+  address: String!
+  playerId: String!
+  balance: Int!
+  createdAt: Timestamp!
+}

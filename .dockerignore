@@ -1,0 +1,28 @@
+# Ignore node dependencies
+node_modules
+npm-debug.log
+
+# Ignore build output (Next.js / Firebase)
+.next
+firebase-debug.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Git
+.git
+.gitignore
+
+# Ignore Docker compose + envs (if mounted separately)
+docker-compose.yml
+.env
+.env.txt
+
+# Ignore big assets (only if not needed in container)
+*.mp4
+*.mov
+*.zip
+*.tar
+*.7z
+*.exe

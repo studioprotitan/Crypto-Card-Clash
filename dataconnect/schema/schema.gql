@@ -1,0 +1,80 @@
+type User @table {
+  username: String!
+  email: String!
+  createdAt: Timestamp!
+  walletAddress: String
+  lastLoginAt: Timestamp
+  profilePictureUrl: String
+}
+
+type Character @table {
+  user: User!
+  characterName: String!
+  characterClass: String!
+  level: Int!
+  experience: Int!
+  createdAt: Timestamp!
+  health: Int
+  mana: Int
+  strength: Int
+  intelligence: Int
+  agility: Int
+  equippedDeck: Deck
+}
+
+type AetheriaCard @table {
+  cardName: String!
+  elementType: String!
+  rarity: String!
+  baseAttack: Int!
+  baseDefense: Int!
+  createdAt: Timestamp!
+  description: String
+  imageUrl: String
+  abilityText: String
+  maxLevel: Int
+  isTradable: Boolean
+}
+
+type PlayerCard @table {
+  owner: User!
+  aetheriaCard: AetheriaCard!
+  cardInstanceId: UUID!
+  level: Int!
+  experience: Int!
+  createdAt: Timestamp!
+  currentAttack: Int
+  currentDefense: Int
+  isEquipped: Boolean
+  equippedSlot: String
+}
+
+type Deck @table {
+  user: User!
+  character: Character!
+  deckName: String!
+  createdAt: Timestamp!
+  description: String
+  isActive: Boolean
+}
+
+type DeckCard @table(key: ["deck", "playerCard"]) {
+  deck: Deck!
+  playerCard: PlayerCard!
+  positionInDeck: Int!
+  isMainDeckCard: Boolean
+}
+
+type Transaction @table {
+  initiatorUser: User!
+  targetUser: User
+  transactionType: String!
+  assetType: String!
+  assetId: UUID!
+  amount: Float!
+  currency: String!
+  transactionHash: String!
+  createdAt: Timestamp!
+  status: String
+  marketplaceListingId: UUID
+}

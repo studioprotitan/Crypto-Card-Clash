@@ -1,0 +1,8 @@
+connectorId: stripe
+generate:
+  javascriptSdk:
+    outputDir: ../../dataconnect-generated/js/stripe
+    package: "@dataconnect/generated-stripe"
+    packageJsonDir: ../../
+    react: false
+    angular: false

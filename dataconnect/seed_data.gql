@@ -1,0 +1,14 @@
+mutation PopulateProducts @auth(level: USER) {
+  product_upsertMany(data: [
+    {
+      id: "123",
+      name: "Awesome Widget",
+      price: 9.99
+    },
+    {
+      id: "456",
+      name: "Deluxe Gizmo",
+      price: 19.99
+    }
+  ])
+}

@@ -1,0 +1,133 @@
+{
+  "decks": [
+    {
+      "id": "deck-echelonian-command",
+      "name": "Echelonian Command Deck",
+      "faction": "Echelonian",
+      "heroPilotId": "pilot-aurelia-voss",
+      "includeRandomEchelonian": true,
+      "includes": [
+        {"cardId":"artifact-quill-of-binding","qty":1},
+        {"cardId":"weapon-arc-lance","qty":1},
+        {"cardId":"buff-ward-sigil","qty":2},
+        {"cardId":"npc-echelonian-scout","qty":3},
+        {"cardId":"vehicle-formula-armor-mk1","qty":1}
+      ],
+      "coverImageUrl": "/images/decks/echelonian.jpg",
+      "priceUSD": 24.00,
+      "nfcEnabled": true
+    },
+    {
+      "id": "deck-raider-warlords",
+      "name": "Raider Warlords Deck",
+      "faction": "Raider",
+      "heroPilotId": "pilot-drex-vandal",
+      "includeRandomEchelonian": false,
+      "includes": [
+        {"cardId":"weapon-slag-revolver","qty":2},
+        {"cardId":"npc-raider-brute","qty":4},
+        {"cardId":"artifact-scorch-idol","qty":1},
+        {"cardId":"buff-adrenaline-rush","qty":2}
+      ],
+      "coverImageUrl": "/images/decks/raider.jpg",
+      "priceUSD": 22.00,
+      "nfcEnabled": true
+    },
+    {
+      "id": "deck-mystic-alchemists",
+      "name": "Mystic Alchemists Deck",
+      "faction": "Alchemist",
+      "heroPilotId": "pilot-silas-crucible",
+      "includeRandomEchelonian": false,
+      "includes": [
+        {"cardId":"artifact-occult-camera","qty":1},
+        {"cardId":"buff-transmutation-draught","qty":3},
+        {"cardId":"npc-apprentice-alchemist","qty":3},
+        {"cardId":"weapon-etheric-distiller","qty":1}
+      ],
+      "coverImageUrl": "/images/decks/alchemist.jpg",
+      "priceUSD": 23.00,
+      "nfcEnabled": true
+    },
+    {
+      "id": "deck-golem-salvagers",
+      "name": "Golem Salvagers Deck",
+      "faction": "Golem",
+      "heroPilotId": "pilot-ivy-gearwright",
+      "includeRandomEchelonian": false,
+      "includes": [
+        {"cardId":"npc-scrap-golem","qty":3},
+        {"cardId":"artifact-core-rune","qty":2},
+        {"cardId":"weapon-magnet-harpoon","qty":1},
+        {"cardId":"buff-industrial-fortitude","qty":2}
+      ],
+      "coverImageUrl": "/images/decks/golem.jpg",
+      "priceUSD": 22.00,
+      "nfcEnabled": true
+    },
+    {
+      "id": "deck-monster-hunter-kaiju",
+      "name": "Monster Hunter Kaiju Deck",
+      "faction": "Kaiju",
+      "heroPilotId": "pilot-rook-kazan",
+      "includeRandomEchelonian": false,
+      "includes": [
+        {"cardId":"weapon-storm-bolter","qty":2},
+        {"cardId":"npc-tracker-ranger","qty":3},
+        {"cardId":"artifact-amber-spike","qty":1},
+        {"cardId":"buff-hunters-instinct","qty":2}
+      ],
+      "coverImageUrl": "/images/decks/kaiju.jpg",
+      "priceUSD": 25.00,
+      "nfcEnabled": true
+    },
+    {
+      "id": "deck-ghost-wardens",
+      "name": "Ghost Wardens Deck",
+      "faction": "Ghost",
+      "heroPilotId": "pilot-jane-black",
+      "includeRandomEchelonian": false,
+      "includes": [
+        {"cardId":"artifact-haunt-lantern","qty":1},
+        {"cardId":"weapon-ectoplasm-rifle","qty":1},
+        {"cardId":"npc-spirit-exorcist","qty":3},
+        {"cardId":"buff-veil-walker","qty":2}
+      ],
+      "coverImageUrl": "/images/decks/ghost.jpg",
+      "priceUSD": 23.00,
+      "nfcEnabled": true
+    },
+    {
+      "id": "deck-formula-pilots",
+      "name": "Formula Pilots Deck",
+      "faction": "Formula",
+      "heroPilotId": "pilot-orion-velocity",
+      "includeRandomEchelonian": false,
+      "includes": [
+        {"cardId":"vehicle-formula-armor-mk2","qty":1},
+        {"cardId":"buff-oversteer","qty":2},
+        {"cardId":"artifact-pit-chronometer","qty":1},
+        {"cardId":"npc-crew-chief","qty":2}
+      ],
+      "coverImageUrl": "/images/decks/formula.jpg",
+      "priceUSD": 24.00,
+      "nfcEnabled": true
+    },
+    {
+      "id": "deck-kraken-pilots",
+      "name": "Kraken Ship Pilots Deck",
+      "faction": "Kraken",
+      "heroPilotId": "pilot-nerida-straits",
+      "includeRandomEchelonian": false,
+      "includes": [
+        {"cardId":"vehicle-deep-sea-drone","qty":2},
+        {"cardId":"weapon-harpoon-cannon","qty":1},
+        {"cardId":"npc-cargo-runner","qty":2},
+        {"cardId":"buff-brine-shield","qty":2}
+      ],
+      "coverImageUrl": "/images/decks/kraken.jpg",
+      "priceUSD": 24.00,
+      "nfcEnabled": true
+    }
+  ]
+}

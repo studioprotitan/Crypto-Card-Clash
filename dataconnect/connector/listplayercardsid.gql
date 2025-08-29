@@ -1,0 +1,11 @@
+type Player @table(key: "id") {
+  id: ID!
+  username: String!
+  walletId: String
+  createdAt: Timestamp!
+}
+
+type Query {
+  listPlayers: [Player!]!
+  listCards: [Card!]!
+}

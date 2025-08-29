@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avaturn Placeholder — &lt;model-viewer&gt; Fallback</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: #0b0e12; color: #cbd5e1; }
+    #wrap { position: fixed; inset: 0; display: grid; grid-template-rows: 1fr auto; }
+    model-viewer { width: 100%; height: 100%; }
+    footer { padding: 10px 12px; font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: rgba(0,0,0,.5); }
+    a { color: #93c5fd; }
+  </style>
+  <!-- CDN load; if offline, you can download this file and serve locally -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer@3.4.0/build/model-viewer.min.js"></script>
+</head>
+<body>
+    <model-viewer src="placeholder.glb"
+                  camera-controls
+                  ar
+                  environment-image="neutral"
+                  exposure="1"
+                  shadow-intensity="0"
+                  autoplay>
+    </model-viewer>
+
+</model-viewer>
+    <footer>
+      If this shows the model but the Three.js page does not, the GLB is valid. Focus on script paths, CDN access, or camera framing in Three.js.
+    </footer>
+  </div>
+</body>
+</html>

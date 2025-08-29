@@ -1,0 +1,8 @@
+type Payout @table(key: "id") {
+  id: ID!
+  playerId: String!
+  amount: Int!
+  currency: String!
+  status: String!
+  createdAt: Timestamp!
+}

@@ -1,0 +1,7 @@
+type Card @table(key: "id") {
+  id: ID!
+  name: String!
+  rarity: String!
+  power: Int!
+  ownerId: String!
+}

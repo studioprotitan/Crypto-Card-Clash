@@ -1,0 +1,13 @@
+runtime:
+  nodeVersion: "20"
+
+runConfig:
+  command: "npm run start"   # or next start / vite preview / react-scripts start
+  memoryMiB: 1024
+  cpu: 1
+
+env:
+  - variable: AVATURN_PROJECT_ID
+    value: "your_project_id"
+  - variable: FIREBASE_PROJECT_ID
+    value: "crypto-card-clash"

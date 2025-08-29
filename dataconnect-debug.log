@@ -1,0 +1,9 @@
+I0826 18:47:23.216311   42084 load.go:31] Reloading schema and connectors...
+E0826 18:47:23.218328   42084 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service "crypto-card-clash-hq3kj-service". No service has a schema.
+E0826 18:47:23.218328   42084 load.go:73] Could not load sources: 
+Errors: schema\schema.gql:24:6: Cannot redeclare type Query.
+I0826 18:47:23.219412   42084 collector.go:107] schema extensions wrote into "C:\\Developer\\Restore_config_only\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73251B] 
+I0826 18:47:23.219412   42084 load.go:74] Finished reloading
+I0826 18:47:23.220520   42084 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+I0826 18:47:23.220520   42084 dev.go:102] Listening on address (HTTP + gRPC): [::1]:9399

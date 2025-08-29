@@ -1,0 +1,39 @@
+mutation InsertAetheriaCard @auth(level: USER) {
+  aetheriaCard_insert(data: {
+    cardName: "Example Card"
+    elementType: "Fire"
+    baseAttack: 10
+    baseDefense: 5
+    rarity: "Common"
+    createdAt_expr: "request.time"
+  })
+}
+
+query ListTradableAetheriaCards @auth(level: PUBLIC) {
+  aetheriaCards(where: {isTradable: {eq: true}}) {
+    id
+    cardName
+    elementType
+    baseAttack
+    baseDefense
+    rarity
+  }
+}
+
+mutation UpdatePlayerCardLevel($id: UUID!, $level: Int!) @auth(level: USER) {
+  playerCard_update(
+    key: {id: $id}
+    data: {
+      level: $level
+    }
+  )
+}
+
+query GetUserCharacters @auth(level: USER) {
+  characters(where: {userId: {eq_expr: "auth.uid"}}) {
+    id
+    characterName
+    characterClass
+    level
+  }
+}
