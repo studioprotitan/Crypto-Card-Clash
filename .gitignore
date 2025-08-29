@@ -84,4 +84,6 @@ Thumbs.db
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
- 24c1f75 (Added MultiplayerColiseum.tsx + Goblin test deck + fixes)
+
+# Ignore all 3D models
+*.glb
