@@ -11,7 +11,7 @@ export const CardHeader = ({ children }: { children: ReactNode }) => (
 );
 
 export const CardTitle = ({ children }: { children: ReactNode }) => (
-  <h3 className="text-lg font-semibold">{children}</h3>
+  <h3 className="text-lg font-semibold leading-none tracking-tight">{children}</h3>
 );
 
 export const CardDescription = ({ children }: { children: ReactNode }) => (
