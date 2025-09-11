@@ -1,0 +1,16 @@
+/* C:\Developer\Restore_config_only\src\components\Leaderboard.module.css */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tr {
+  border-bottom: 1px solid #444;
+}
+
+.th {
+  padding: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+  color: #ccc;
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ApolloProvider } from "@apollo/client";
-import { client } from "@dataconnect/generated/client";
- 
+import { dataConnectClient } from "./apolloClient";  // ✅ this file exists
+import App from "./App";  // ✅ make sure src/App.tsx exists and exports default
+
 // Assuming you have a root App component
 // import App from "./App";
  

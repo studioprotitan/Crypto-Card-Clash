@@ -1,33 +1,41 @@
+// src/components/Leaderboard.tsx
+"use client";
 import React from "react";
-import { useLeaderboard } from "../hooks/useLeaderboard";
+import styles from "./Leaderboard.module.css";
 
-const Leaderboard: React.FC = () => {
-  const { entries } = useLeaderboard();
+type Player = {
+  id: string;
+  wins: number;
+  losses: number;
+  fuelEfficiency: number;
+};
 
+interface LeaderboardProps {
+  players: Player[];
+}
+
+const Leaderboard: React.FC<LeaderboardProps> = ({ players }) => {
   return (
-    <div style={{ padding: "1rem", border: "2px solid #444" }}>
-      <h2>🏆 Coliseum Leaderboard</h2>
-      <table style={{ width: "100%", borderCollapse: "collapse" }}>
-        <thead>
-          <tr>
-            <th style={{ borderBottom: "1px solid #999" }}>Player</th>
-            <th style={{ borderBottom: "1px solid #999" }}>Wins</th>
-            <th style={{ borderBottom: "1px solid #999" }}>Losses</th>
-            <th style={{ borderBottom: "1px solid #999" }}>Fuel Efficiency</th>
+    <table className={styles.table}>
+      <thead>
+        <tr className={styles.tr}>
+          <th className={styles.th}>Player</th>
+          <th className={styles.th}>Wins</th>
+          <th className={styles.th}>Losses</th>
+          <th className={styles.th}>Fuel Efficiency</th>
+        </tr>
+      </thead>
+      <tbody>
+        {players.map((player) => (
+          <tr key={player.id} className={styles.tr}>
+            <td className={styles.td}>{player.id}</td>
+            <td className={styles.td}>{player.wins}</td>
+            <td className={styles.td}>{player.losses}</td>
+            <td className={styles.td}>{player.fuelEfficiency}</td>
           </tr>
-        </thead>
-        <tbody>
-          {entries.map((entry, i) => (
-            <tr key={i}>
-              <td>{entry.playerId}</td>
-              <td>{entry.wins}</td>
-              <td>{entry.losses}</td>
-              <td>{entry.fuelEfficiency.toFixed(2)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </table>
   );
 };
 

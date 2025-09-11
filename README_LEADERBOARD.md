@@ -9,23 +9,21 @@ This scaffold provides a simple real-time leaderboard synced from Firestore.
 
 ## 📖 Firestore Schema
 
-```
 leaderboard/{playerId}
   wins: number
   losses: number
   fuelEfficiency: number
-```
 
 ## 🚀 Usage
 
 In your app:
 
-```tsx
+tsx
 import Leaderboard from "./components/Leaderboard";
 
 function App() {
   return <Leaderboard />;
 }
-```
+
 
 Make sure your Firestore contains a `leaderboard` collection with player stats.

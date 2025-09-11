@@ -1,0 +1,30 @@
+.container {
+  padding: 1rem;
+  border: 2px solid #ccc;
+}
+
+.heading {
+  font-size: 1.25rem; /* ~text-xl */
+  font-weight: bold;
+}
+
+.turn {
+  margin-top: 0.5rem;
+}
+
+.fuel {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #2563eb; /* Tailwind blue-600 */
+  color: white;
+  border-radius: 0.25rem;
+}
+
+.button:disabled {
+  opacity: 0.5;
+}

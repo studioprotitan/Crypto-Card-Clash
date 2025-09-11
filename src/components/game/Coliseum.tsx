@@ -1,23 +1,10 @@
-// src/components/game/MultiplayerColiseum.tsx
 import React, { useEffect } from "react";
 import { useMultiplayerGame } from "../../hooks/useMultiplayerGame";
 import styles from "./Coliseum.module.css";
-import { Button } from "../ui/button";
 
-const Coliseum: React.FC<{ gameId: string; playerId: string }> = ({
-  gameId,
-  playerId,
-}) => {
-  const {
-    playerState,
-    opponentState,
-    turn,
-    initPlayer,
-    spendFuel,
-    captureCard,
-    result,
-    inMatch,
-  } = useMultiplayerGame(gameId, playerId);
+const Coliseum: React.FC<{ gameId: string; playerId: string }> = ({ gameId, playerId }) => {
+  const { playerState, opponentState, turn, initPlayer, spendFuel } =
+    useMultiplayerGame(gameId, playerId);
 
   useEffect(() => {
     initPlayer();
@@ -28,42 +15,24 @@ const Coliseum: React.FC<{ gameId: string; playerId: string }> = ({
   return (
     <div className={styles.container}>
       <h2 className={styles.heading}>🏛️ Multiplayer Coliseum</h2>
-
-      {!inMatch && result && (
-        <p className={styles.result}>
-          Match Over — You {result === "win" ? "Won 🎉" : "Lost 💀"}
-        </p>
-      )}
-
       <p className={styles.turn}>
         It’s {turn === playerId ? "your" : "opponent’s"} turn
       </p>
 
       <h3 className={styles.fuel}>⛽ Fuel: {playerState.fuel}</h3>
-      <Button
-        variant="default"
+      <button
         className={styles.button}
         onClick={() => spendFuel(10)}
         disabled={turn !== playerId}
       >
         Play Card (-10 Fuel)
-      </Button>
+      </button>
 
       <h3>Opponent Fuel: {opponentState?.fuel ?? "??"}</h3>
 
       <div>
         <h3>Your Captured</h3>
         <pre>{JSON.stringify(playerState.captured, null, 2)}</pre>
-      </div>
-
-      <div>
-        <Button
-          variant="destructive"
-          onClick={() => captureCard("🔥 Test Card")}
-          disabled={turn !== playerId}
-        >
-          Capture Test Card
-        </Button>
       </div>
     </div>
   );
